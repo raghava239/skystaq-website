@@ -27,4 +27,204 @@
       color: #81d4fa; /* lighter blue */
     }
 
-    /* Navbar *
+    /* Navbar */
+    header {
+      background-color: #243b65; /* dark blue */
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .nav-links li a {
+      padding: 8px 14px;
+      border-radius: 5px;
+    }
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      background-color: #4fc3f7;
+      color: #243b65;
+      font-weight: 700;
+      box-shadow: 0 0 8px #4fc3f7;
+    }
+
+    /* Logo on right */
+    .logo {
+      height: 90px; /* bigger */
+      object-fit: contain;
+      cursor: pointer;
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    /* Container & sections */
+    main {
+      max-width: 920px;
+      margin: 45px auto 70px auto;
+      padding: 0 25px;
+    }
+    section {
+      margin-bottom: 65px;
+      background: #2c3e70; /* medium blue */
+      padding: 35px 45px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(79, 195, 247, 0.25);
+      border: 1px solid #4fc3f7;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover {
+      box-shadow: 0 15px 35px rgba(129, 212, 250, 0.6);
+    }
+    section h2 {
+      margin-bottom: 22px;
+      color: #81d4fa;
+      border-bottom: 3px solid #4fc3f7;
+      padding-bottom: 8px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      text-shadow: 0 0 6px #4fc3f7;
+    }
+    p, ul {
+      font-size: 1.15rem;
+      color: #dbe9ff;
+    }
+    ul {
+      margin-left: 22px;
+      list-style-type: square;
+      color: #b0c9ff;
+    }
+    ul li {
+      margin-bottom: 9px;
+    }
+
+    /* Button style */
+    .btn-enquiry {
+      display: inline-block;
+      background-color: #4fc3f7;
+      color: #243b65;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.4s ease, box-shadow 0.4s ease;
+      text-decoration: none;
+      margin-top: 28px;
+      box-shadow: 0 5px 15px rgba(79, 195, 247, 0.7);
+    }
+    .btn-enquiry:hover {
+      background-color: #81d4fa;
+      box-shadow: 0 8px 25px rgba(129, 212, 250, 0.9);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+      main {
+        margin: 25px 15px 40px 15px;
+        padding: 0 12px;
+      }
+      section {
+        padding: 25px 20px;
+      }
+      .logo {
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#experts">Experts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <img src="SkyStaq_logo.PNG" alt="SkyStaq Logo" class="logo" />
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to SkyStaq Solutions</h2>
+      <p>
+        Empowering your career through industry-relevant IT training! At SkyStaq Solutions,
+        we bridge the gap between theoretical learning and real-world expertise. Whether
+        you're a fresher or an experienced professional looking to upgrade your skills, 
+        we offer top-notch training in the most in-demand technologies. Join us and transform
+        your learning journey into a successful career path.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2>About SkyStaq Solutions</h2>
+      <p>
+        SkyStaq Solutions is a premier IT training and upskilling provider focused on delivering 
+        quality education through expert-led sessions, practical curriculum, and career-driven 
+        support. Based on real-world scenarios and project-based learning, our goal is to make 
+        every learner job-ready.
+      </p>
+      <p>
+        With a strong reputation for integrity, hands-on learning, and student satisfaction, 
+        SkyStaq Solutions has become a trusted name for IT professionals seeking growth in 
+        today’s dynamic tech environment.
+      </p>
+    </section>
+
+    <section id="courses">
+      <h2>Our Courses Offer Career-Aligned Curriculum</h2>
+      <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
+      <ul>
+        <li>🚀 <strong>Cloud Platforms</strong>: AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</li>
+        <li>🛠️ <strong>DevOps & Microservices</strong>: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines, Microservices Architecture, Spring Boot, REST APIs</li>
+        <li>💻 <strong>Programming & ITSM</strong>: Python, Java, ServiceNow, Salesforce — including Admin, Development, Workflows, Integration</li>
+      </ul>
+      <p>Each course includes real-time projects, certification guidance, and placement support.</p>
+    </section>
+
+    <section id="experts">
+      <h2>Learn from Certified Professionals</h2>
+      <ul>
+        <li>Certified AWS, Azure, GCP Architects</li>
+        <li>DevOps Engineers from top cloud consulting firms</li>
+        <li>ServiceNow & Salesforce Certified Professionals</li>
+        <li>Experienced Java & Python Developers</li>
+      </ul>
+      <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&A interaction to ensure complete clarity.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch with SkyStaq Solutions</h2>
+      <p>📱 Mobile: +91-9949955189</p>
+      <p>📧 Email: info@skystaq.in</p>
+      <p>🌐 Website: www.skystaq.in</p>
+      <p>Interested in a course or need guidance?</p>
+      <a href="https://docs.google.com/forms/d/1kN4mKxJHBumQ3bwzI3iheZ7wvSK1RbPpfZxuxXiVOSU/preview" target="_blank" class="btn-enquiry">Submit Your Enquiry</a>
+    </section>
+  </main>
+</body>
+</html>
