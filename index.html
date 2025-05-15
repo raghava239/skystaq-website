@@ -13,8 +13,8 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     body {
-      background: #ffffff; /* white background */
-      color: #1a1a1a; /* dark text for readability */
+      background: #121212;
+      color: #ddd;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
@@ -29,12 +29,12 @@
 
     /* Navbar */
     header {
-      background-color: #e6f0ff; /* very light blue */
+      background-color: #1f1f1f;
       padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(30, 144, 255, 0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
       display: flex;
       align-items: center;
     }
@@ -44,12 +44,11 @@
       gap: 25px;
       font-weight: 600;
       font-size: 1.1rem;
-      flex: 1;
+      flex: 1; /* Take all available horizontal space */
     }
     .nav-links li a {
       padding: 8px 12px;
       border-radius: 4px;
-      color: #1e90ff;
     }
     .nav-links li a:hover,
     .nav-links li a.active {
@@ -59,16 +58,11 @@
 
     /* Logo */
     .logo {
-      height: 50px; /* smaller */
+      height: 60px;
       object-fit: contain;
       cursor: pointer;
-      opacity: 0.85; /* slightly transparent */
+      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
       margin-left: 20px;
-      transition: opacity 0.3s ease;
-    }
-    .logo:hover {
-      opacity: 1;
-      filter: drop-shadow(0 0 5px #1e90ff);
     }
 
     /* Container & sections */
@@ -79,10 +73,10 @@
     }
     section {
       margin-bottom: 60px;
-      background: #f0f7ff; /* light blue background for sections */
+      background: #1e1e1e;
       padding: 30px 40px;
       border-radius: 8px;
-      box-shadow: 0 6px 15px rgba(30, 144, 255, 0.15);
+      box-shadow: 0 6px 15px rgba(30, 144, 255, 0.2);
     }
     section h2 {
       margin-bottom: 20px;
@@ -94,7 +88,7 @@
     }
     p, ul {
       font-size: 1.1rem;
-      color: #333;
+      color: #ccc;
     }
     ul {
       margin-left: 20px;
@@ -133,7 +127,7 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
-        flex: none;
+        flex: none; /* Reset flex on small screens */
       }
       main {
         margin: 20px 15px;
@@ -182,100 +176,7 @@
     </section>
 
     <section id="courses">
-      <h2>Our Courses Offer Career-Aligned Curriculum</h2>    
-      <!-- Cloud Platforms -->
-      <div class="course-category">
-        <button class="toggle-btn" aria-expanded="false" aria-controls="cloudPlatformsContent">
-          <img src="https://cdn-icons-png.flaticon.com/32/919/919853.png" alt="AWS Logo" class="course-logo" title="AWS" />
-          <img src="https://cdn-icons-png.flaticon.com/32/300/300221.png" alt="GCP Logo" class="course-logo" title="GCP" />
-          <img src="https://cdn-icons-png.flaticon.com/32/732/732221.png" alt="Azure Logo" class="course-logo" title="Azure" />
-          <strong>🚀 Cloud Platforms</strong>
-        </button>
-        <div id="cloudPlatformsContent" class="course-content" hidden>
-          <p>AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</p>
-        </div>
-      </div>
-    
-      <!-- DevOps & Microservices -->
-      <div class="course-category">
-        <button class="toggle-btn" aria-expanded="false" aria-controls="devopsContent">
-          <img src="https://cdn-icons-png.flaticon.com/32/919/919825.png" alt="DevOps Logo" class="course-logo" title="DevOps" />
-          <strong>🛠️ DevOps & Microservices</strong>
-        </button>
-        <div id="devopsContent" class="course-content" hidden>
-          <p>Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines, Microservices Architecture, Spring Boot, REST APIs</p>
-        </div>
-      </div>
-    
-      <!-- Programming & ITSM -->
-      <div class="course-category">
-        <button class="toggle-btn" aria-expanded="false" aria-controls="programmingContent">
-          <strong>💻 Programming & ITSM</strong>
-        </button>
-        <div id="programmingContent" class="course-content" hidden>
-          <p>Python, Java, ServiceNow, Salesforce — including Admin, Development, Workflows, Integration</p>
-        </div>
-      </div>
-    
-      <p style="margin-top: 15px;">
-        Each course includes real-time projects, certification guidance, placement support, resume building, mock interviews, and post job assistance.
-      </p>
-    </section>
-    
-    <style>
-      /* Additional styles for course dropdowns */
-      .course-category {
-        margin-bottom: 20px;
-      }
-      .toggle-btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #1e90ff;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px 0;
-        width: 100%;
-        text-align: left;
-      }
-      .toggle-btn:hover {
-        color: #63a4ff;
-      }
-      .course-logo {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
-      }
-      .course-content {
-        padding-left: 34px;
-        color: #333;
-        font-size: 1.1rem;
-      }
-    </style>
-    
-    <script>
-      document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', () => {
-          const contentId = button.getAttribute('aria-controls');
-          const content = document.getElementById(contentId);
-          const isHidden = content.hasAttribute('hidden');
-    
-          if (isHidden) {
-            content.removeAttribute('hidden');
-            button.setAttribute('aria-expanded', 'true');
-          } else {
-            content.setAttribute('hidden', '');
-            button.setAttribute('aria-expanded', 'false');
-          }
-        });
-      });
-    </script>
-    
-    
-=======
+      <h2>Our Courses Offer Career-Aligned Curriculum</h2>
       <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
       <ul>
         <li>🚀 <strong>Cloud Platforms</strong>: AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</li>
@@ -296,11 +197,10 @@
       <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&A interaction to ensure complete clarity.</p>
     </section>
 
->>>>>>> parent of e49514c (add)
     <section id="contact">
       <h2>Get in Touch with SkyStaq Solutions</h2>
       <p>📱 Mobile: +91-9949955189</p>
-      <p>📧 Email: skystaq@gmail.com</p>
+      <p>📧 Email: info@skystaq.in</p>
       <p>🌐 Website: www.skystaq.in</p>
       <p>Interested in a course or need guidance?</p>
       <a href="https://docs.google.com/forms/d/1kN4mKxJHBumQ3bwzI3iheZ7wvSK1RbPpfZxuxXiVOSU/preview" target="_blank" class="btn-enquiry">Submit Your Enquiry</a>
@@ -308,3 +208,4 @@
   </main>
 </body>
 </html>
+
