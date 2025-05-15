@@ -1,510 +1,203 @@
-**Here's the updated code:**
-
-**1. index.html (Home Page)**
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - Home</title>
+    <title>SkyStaq Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+        header img{
+            margin-bottom: 20px;
+            max-height: 80px;
+        }
+        nav {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #343a40;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        main p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer p {
+            font-size: 0.9em;
+        }
+
+        .inquiry-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .inquiry-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            main h2 {
+                font-size: 1.5em;
+            }
+            main p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-        <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-            <p>Empowering your career through industry-relevant IT training!</p>
-        </div>
+        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo">
+        <h1>Welcome to SkyStaq Solutions</h1>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#experts">Training by Experts</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main>
         <section id="home">
-            <h2>Home</h2>
-            <p>At SkyStaq Solutions, we bridge the gap between theoretical learning and real-world expertise. Whether you're a fresher or an experienced professional looking to upgrade your skills, we offer top-notch training in the most in-demand technologies. Join us and transform your learning journey into a successful career path.</p>
-             <div class="image-container">
-                <img src="images/home-page.jpg" alt="SkyStaq Solutions Training" >
-            </div>
+            <h2>Welcome to SkyStaq Solutions</h2>
+            <p>Empowering your career through industry-relevant IT training! At SkyStaq Solutions, we bridge the gap between theoretical learning and real-world expertise. Whether you're a fresher or an experienced professional looking to upgrade your skills, we offer top-notch training in the most in-demand technologies. Join us and transform your learning journey into a successful career path.</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SkyStaq Solutions</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-**2. about.html (About Page)**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - About</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-        <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
-    <main>
         <section id="about">
             <h2>About SkyStaq Solutions</h2>
-            <p>SkyStaq Solutions is a premier IT training and upskilling provider focused on delivering quality education through expert-led sessions, practical curriculum, and career-driven support. Based on real-world scenarios and project-based learning, our goal is to make every learner job-ready.</p>
-            <p>With a strong reputation for integrity, hands-on learning, and student satisfaction, SkyStaq Solutions has become a trusted name for IT professionals seeking growth in today’s dynamic tech environment.</p>
-             <div class="image-container">
-                <img src="images/about-us.jpg" alt="SkyStaq Solutions Team" >
-            </div>
+            <p>SkyStaq Solutions is a premier IT training and upskilling provider focused on delivering quality education through expert-led sessions, practical curriculum, and career-driven support. Based on real-world scenarios and project-based learning, our goal is to make every learner job-ready. With a strong reputation for integrity, hands-on learning, and student satisfaction, SkyStaq Solutions has become a trusted name for IT professionals seeking growth in today’s dynamic tech environment.</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SkyStaq Solutions</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-**3. courses.html (Courses Page)**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - Courses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-         <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
-    <main>
         <section id="courses">
             <h2>Our Courses Offer Career-Aligned Curriculum</h2>
             <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
-            <div class="course-block">
-                <h3>🚀 Cloud Platforms</h3>
-                <p>AWS: Core services, IAM, EC2, S3, VPC, Lambda, DevOps on AWS.</p>
-                <p>GCP: Google Compute Engine, GKE, Cloud Storage, IAM, Cloud Functions.</p>
-                <p>Azure: Azure VMs, Networking, Storage, App Services, Azure DevOps.</p>
-            </div>
-            <div class="course-block">
-                <h3>🛠️ DevOps & Microservices</h3>
-                <p>DevOps: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines.</p>
-                <p>Microservices: Architecture principles, Spring Boot, REST APIs, Dockerized services.</p>
-            </div>
-            <div class="course-block">
-                <h3>💻 Programming & ITSM</h3>
-                <p>Python: Core Python, OOP, APIs, Django basics.</p>
-                <p>Java: Core Java, JDBC, Servlets, Spring Framework.</p>
-                <p>ServiceNow: Admin, Development, Workflows, Integration.</p>
-                <p>Salesforce: Admin, Development, Apex, Lightning Components.</p>
-            </div>
+            <h3>&#128640; Cloud Platforms</h3>
+            <p>AWS: Core services, IAM, EC2, S3, VPC, Lambda, DevOps on AWS.</p>
+            <p>GCP: Google Compute Engine, GKE, Cloud Storage, IAM, Cloud Functions.</p>
+            <p>Azure: Azure VMs, Networking, Storage, App Services, Azure DevOps.</p>
+            <h3>&#128696; DevOps &amp; Microservices</h3>
+            <p>DevOps: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines.</p>
+            <p>Microservices: Architecture principles, Spring Boot, REST APIs, Dockerized services.</p>
+            <h3>&#128100; Programming &amp; ITSM</h3>
+            <p>Python: Core Python, OOP, APIs, Django basics.</p>
+            <p>Java: Core Java, JDBC, Servlets, Spring Framework.</p>
+            <p>ServiceNow: Admin, Development, Workflows, Integration.</p>
+            <p>Salesforce: Admin, Development, Apex, Lightning Components.</p>
             <p>Each course includes real-time projects, certification guidance, and placement support.</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SkyStaq Solutions</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-**4. experts.html (Training by Experts Page)**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - Training by Experts</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-         <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
-    <main>
         <section id="experts">
             <h2>Learn from Certified Professionals</h2>
             <p>Our trainers are seasoned industry professionals with rich experience in leading MNCs. They bring real-time project knowledge, current trends, and in-depth technical understanding to the classroom. We don’t just teach – we mentor, guide, and prepare you for real-world challenges.</p>
             <ul>
                 <li>Certified AWS, Azure, GCP Architects</li>
                 <li>DevOps Engineers from top cloud consulting firms</li>
-                <li>ServiceNow & Salesforce Certified Professionals</li>
-                <li>Experienced Java & Python Developers</li>
+                <li>ServiceNow &amp; Salesforce Certified Professionals</li>
+                <li>Experienced Java &amp; Python Developers</li>
             </ul>
-            <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&A interaction to ensure complete clarity.</p>
-             <div class="image-container">
-                <img src="images/trainer-image.jpg" alt="SkyStaq Solutions Experts" >
-            </div>
+            <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&amp;A interaction to ensure complete clarity.</p>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SkyStaq Solutions</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-**5. contact.html (Contact Page)**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-         <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
-    <main>
         <section id="contact">
             <h2>Get in Touch with SkyStaq Solutions</h2>
-            <div class="contact-info">
-                <p>📱 Mobile: +91-9949955189</p>
-                <p>📧 Email: info@skystaq.in</p>
-                <p>🌐 Website: www.skystaq.in</p>
-            </div>
+            <p>&#128241; Mobile: +91-9949955189</p>
+            <p>&#128159; Email: info@skystaq.in</p>
+            <p>&#127757; Website: www.skystaq.in</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSflD0z969vK_jLpB_eL9HjM9hL3j5C8KeB83Fv-z9L9gE9Xw/viewform?usp=sf_link" class="inquiry-button" target="_blank">Submit Inquiry</a>
             <p>Interested in a course or need guidance?</p>
-            <a href="https://forms.gle/NkvM6fqvXScH2qzf9" class="inquiry-button" target="_blank">Submit your enquiry here</a>
+            <p>Submit your enquiry and our support team will reach out to you at the earliest. Your learning journey starts here!</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 SkyStaq Solutions</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-```
-
-**6. blogs.html (Blogs Page)**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Solutions - Blogs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <img src="SkyStaq_logo.PNG" alt="SkyStaq Solutions Logo" height="80">
-         <div class="header-text">
-            <h1>Welcome to SkyStaq Solutions</h1>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="experts.html">Training by Experts</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="blogs">
-            <h2>Blogs</h2>
-            <p>Stay updated with the latest industry trends and insights from our experts.</p>
-            <p>Coming Soon!</p>
-             <div class="image-container">
-                <img src="images/blog-image.jpg" alt="SkyStaq Solutions Blog" >
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 SkyStaq Solutions</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-```
-
-**7. style.css (External Stylesheet)**
-
-```css
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.7;
-}
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 0;
-    margin-right: 10px;
-    color: #FFD700;
-}
-header p {
-    font-size: 1.1em;
-    margin-bottom: 0;
-}
-header img {
-    max-height: 80px;
-    margin-right: 20px;
-}
-nav {
-    background-color: #e9ecef;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-nav ul li {
-    margin: 10px 20px;
-}
-nav ul li a {
-    color: #343a40;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-}
-nav ul li a:hover {
-    color: #007BFF;
-}
-main {
-    padding: 40px;
-    text-align: center;
-}
-main h2 {
-    font-size: 2.5em;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    text-align: left;
-    font-family: 'Arial Black', sans-serif;
-}
-main p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    color: #555;
-}
-.course-block {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-.course-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-}
-.course-block h3 {
-    font-size: 1.8em;
-    color: #007BFF;
-    margin-bottom: 15px;
-    font-family: 'Arial Black', sans-serif;
-}
-.course-block p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: #666;
-}
-.contact-info {
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #FFF;
-    padding: 20px;
-    border-radius: 10PX;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 30px auto;
-    max-width: 600px;
-}
-.contact-info p {
-    font-size: 1.2em;
-    color: #2c3e50;
-}
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 25px 0;
-    text-align: center;
-    margin-top: 40px;
-}
-footer p {
-    font-size: 0.9em;
-}
-.inquiry-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-.inquiry-button:hover {
-    background-color: #218838;
-}
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-.image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-header .header-text{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-header .header-text h1{
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    header h1 {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    header img {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-    main h2 {
-        font-size: 2em;
-    }
-    main p {
-        font-size: 1em;
-    }
-    header .header-text {
-        align-items: center;
-    }
-}
-```
-
-**8. script.js**
-
-```javascript
-document.addEventListener('DOMContentLoaded', () => {
-   //  Interactive elements can be added here
-   console.log('Website is ready!');
-});
-```
