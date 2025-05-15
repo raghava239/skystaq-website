@@ -1,0 +1,133 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.7;
+}
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 25px 20px; /* Added horizontal padding */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; /* Ensure logo and text are in a row */
+}
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+header img {
+    max-height: 80px;
+    margin-right: 20px;
+}
+nav {
+    background-color: #e9ecef;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: #343a40;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #007BFF;
+}
+main {
+    padding: 40px;
+    text-align: center;
+}
+main h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: left;
+}
+main p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+.course-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.course-block h3 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+.course-block p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+footer p {
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    main h2 {
+        font-size: 1.5em;
+    }
+    main p {
+        font-size: 1em;
+    }
+}
