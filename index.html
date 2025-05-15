@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SkyStaq Solutions</title>
   <style>
-    /* Reset & base */
+    /* Reset and base font */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,31 +13,34 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     body {
-      background: #1e2a47; /* lighter dark-blue */
-      color: #e0e7ff; /* lighter text */
+      background: #273858; /* Slight lighter dark blue */
+      color: #e0e7ff; /* Light blue text */
       line-height: 1.6;
       scroll-behavior: smooth;
+      min-height: 100vh;
+      padding-bottom: 60px;
     }
     a {
-      color: #4fc3f7; /* bright sky blue */
+      color: #4fc3f7;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     a:hover {
-      color: #81d4fa; /* lighter blue */
+      color: #81d4fa;
     }
 
-    /* Navbar */
+    /* Header */
     header {
-      background-color: #243b65; /* dark blue */
+      background-color: #1f2d48; /* Dark blue header */
       padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     .nav-links {
       list-style: none;
@@ -48,29 +51,30 @@
     }
     .nav-links li a {
       padding: 8px 14px;
-      border-radius: 5px;
+      border-radius: 6px;
     }
     .nav-links li a:hover,
     .nav-links li a.active {
       background-color: #4fc3f7;
-      color: #243b65;
+      color: #1f2d48;
       font-weight: 700;
       box-shadow: 0 0 8px #4fc3f7;
     }
 
-    /* Logo on right */
+    /* Logo */
     .logo {
-      height: 90px; /* bigger */
+      height: 100px; /* Bigger logo */
       object-fit: contain;
       cursor: pointer;
-      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+      filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.7));
       transition: transform 0.3s ease;
+      margin-left: 15px;
     }
     .logo:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
-    /* Container & sections */
+    /* Main content */
     main {
       max-width: 920px;
       margin: 45px auto 70px auto;
@@ -78,10 +82,10 @@
     }
     section {
       margin-bottom: 65px;
-      background: #2c3e70; /* medium blue */
+      background: #33475b; /* Slightly lighter than header */
       padding: 35px 45px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(79, 195, 247, 0.25);
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(79, 195, 247, 0.3);
       border: 1px solid #4fc3f7;
       transition: box-shadow 0.3s ease;
     }
@@ -93,14 +97,14 @@
       color: #81d4fa;
       border-bottom: 3px solid #4fc3f7;
       padding-bottom: 8px;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       font-weight: 700;
       letter-spacing: 1.1px;
-      text-shadow: 0 0 6px #4fc3f7;
+      text-shadow: 0 0 8px #4fc3f7;
     }
     p, ul {
-      font-size: 1.15rem;
-      color: #dbe9ff;
+      font-size: 1.18rem;
+      color: #e0e7ff;
     }
     ul {
       margin-left: 22px;
@@ -109,49 +113,51 @@
     }
     ul li {
       margin-bottom: 9px;
+      line-height: 1.4;
     }
 
-    /* Button style */
+    /* Button */
     .btn-enquiry {
       display: inline-block;
       background-color: #4fc3f7;
-      color: #243b65;
-      padding: 14px 32px;
+      color: #1f2d48;
+      padding: 16px 36px;
       border-radius: 30px;
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       cursor: pointer;
       border: none;
       transition: background-color 0.4s ease, box-shadow 0.4s ease;
       text-decoration: none;
       margin-top: 28px;
-      box-shadow: 0 5px 15px rgba(79, 195, 247, 0.7);
+      box-shadow: 0 6px 18px rgba(79, 195, 247, 0.8);
     }
     .btn-enquiry:hover {
       background-color: #81d4fa;
-      box-shadow: 0 8px 25px rgba(129, 212, 250, 0.9);
+      box-shadow: 0 10px 30px rgba(129, 212, 250, 1);
     }
 
     /* Responsive */
-    @media (max-width: 700px) {
+    @media (max-width: 720px) {
       header {
         flex-direction: column;
-        gap: 18px;
+        gap: 15px;
       }
       .nav-links {
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
         align-items: center;
       }
       main {
-        margin: 25px 15px 40px 15px;
-        padding: 0 12px;
+        margin: 30px 20px 50px 20px;
+        padding: 0 15px;
       }
       section {
-        padding: 25px 20px;
+        padding: 28px 25px;
       }
       .logo {
-        height: 70px;
+        height: 80px;
+        margin-left: 0;
       }
     }
   </style>
@@ -214,16 +220,13 @@
         <li>ServiceNow & Salesforce Certified Professionals</li>
         <li>Experienced Java & Python Developers</li>
       </ul>
-      <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&A interaction to ensure complete clarity.</p>
+      <p>At SkyStaq, every session is a blend of theoretical learning and practical experience guided by industry experts.</p>
     </section>
 
     <section id="contact">
-      <h2>Get in Touch with SkyStaq Solutions</h2>
-      <p>📱 Mobile: +91-9949955189</p>
-      <p>📧 Email: info@skystaq.in</p>
-      <p>🌐 Website: www.skystaq.in</p>
-      <p>Interested in a course or need guidance?</p>
-      <a href="https://docs.google.com/forms/d/1kN4mKxJHBumQ3bwzI3iheZ7wvSK1RbPpfZxuxXiVOSU/preview" target="_blank" class="btn-enquiry">Submit Your Enquiry</a>
+      <h2>Contact Us</h2>
+      <p>Ready to take your career to the next level? Get in touch with us for personalized guidance and enrolment details.</p>
+      <a href="mailto:info@skystaqsolutions.com" class="btn-enquiry">Enquire Now</a>
     </section>
   </main>
 </body>
