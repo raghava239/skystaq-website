@@ -182,36 +182,99 @@
     </section>
 
     <section id="courses">
-      <h2>
-        Our Courses Offer Career-Aligned Curriculum
-        <button id="toggleCourses" aria-expanded="false" aria-controls="coursesContent" 
-                style="margin-left:10px; font-size:1rem; cursor:pointer; background:#1e90ff; color:#fff; border:none; border-radius:4px; padding:4px 10px;">
-          Show ▼
+      <h2>Our Courses Offer Career-Aligned Curriculum</h2>
+    
+      <!-- Cloud Platforms -->
+      <div class="course-category">
+        <button class="toggle-btn" aria-expanded="false" aria-controls="cloudPlatformsContent">
+          <img src="https://cdn-icons-png.flaticon.com/32/919/919853.png" alt="AWS Logo" class="course-logo" title="AWS" />
+          <img src="https://cdn-icons-png.flaticon.com/32/300/300221.png" alt="GCP Logo" class="course-logo" title="GCP" />
+          <img src="https://cdn-icons-png.flaticon.com/32/732/732221.png" alt="Azure Logo" class="course-logo" title="Azure" />
+          <strong>🚀 Cloud Platforms</strong>
         </button>
-      </h2>
-      
-      <div id="coursesContent" style="display:none; margin-top: 20px; transition: max-height 0.3s ease;">
-        <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
-        <ul>
-          <li>🚀 <strong>Cloud Platforms</strong>: AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</li>
-          <li>🛠️ <strong>DevOps & Microservices</strong>: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines, Microservices Architecture, Spring Boot, REST APIs</li>
-          <li>💻 <strong>Programming & ITSM</strong>: Python, Java, ServiceNow, Salesforce — including Admin, Development, Workflows, Integration</li>
-        </ul>
-        <p>Each course includes real-time projects, certification guidance, placement support, resume building, mock interviews, and post job assistance.</p>
+        <div id="cloudPlatformsContent" class="course-content" hidden>
+          <p>AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</p>
+        </div>
       </div>
+    
+      <!-- DevOps & Microservices -->
+      <div class="course-category">
+        <button class="toggle-btn" aria-expanded="false" aria-controls="devopsContent">
+          <img src="https://cdn-icons-png.flaticon.com/32/919/919825.png" alt="DevOps Logo" class="course-logo" title="DevOps" />
+          <strong>🛠️ DevOps & Microservices</strong>
+        </button>
+        <div id="devopsContent" class="course-content" hidden>
+          <p>Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines, Microservices Architecture, Spring Boot, REST APIs</p>
+        </div>
+      </div>
+    
+      <!-- Programming & ITSM -->
+      <div class="course-category">
+        <button class="toggle-btn" aria-expanded="false" aria-controls="programmingContent">
+          <strong>💻 Programming & ITSM</strong>
+        </button>
+        <div id="programmingContent" class="course-content" hidden>
+          <p>Python, Java, ServiceNow, Salesforce — including Admin, Development, Workflows, Integration</p>
+        </div>
+      </div>
+    
+      <p style="margin-top: 15px;">
+        Each course includes real-time projects, certification guidance, placement support, resume building, mock interviews, and post job assistance.
+      </p>
     </section>
     
-    <script>
-      const toggleBtn = document.getElementById('toggleCourses');
-      const content = document.getElementById('coursesContent');
+    <style>
+      /* Additional styles for course dropdowns */
+      .course-category {
+        margin-bottom: 20px;
+      }
+      .toggle-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1e90ff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px 0;
+        width: 100%;
+        text-align: left;
+      }
+      .toggle-btn:hover {
+        color: #63a4ff;
+      }
+      .course-logo {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+      .course-content {
+        padding-left: 34px;
+        color: #333;
+        font-size: 1.1rem;
+      }
+    </style>
     
-      toggleBtn.addEventListener('click', () => {
-        const isVisible = content.style.display === 'block';
-        content.style.display = isVisible ? 'none' : 'block';
-        toggleBtn.textContent = isVisible ? 'Show ▼' : 'Hide ▲';
-        toggleBtn.setAttribute('aria-expanded', !isVisible);
+    <script>
+      document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const contentId = button.getAttribute('aria-controls');
+          const content = document.getElementById(contentId);
+          const isHidden = content.hasAttribute('hidden');
+    
+          if (isHidden) {
+            content.removeAttribute('hidden');
+            button.setAttribute('aria-expanded', 'true');
+          } else {
+            content.setAttribute('hidden', '');
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
       });
     </script>
+    
     
     <section id="contact">
       <h2>Get in Touch with SkyStaq Solutions</h2>
