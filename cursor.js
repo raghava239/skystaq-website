@@ -1,53 +1,19 @@
-const canvas = document.getElementById("cursorCanvas");
-const ctx = canvas.getContext("2d");
-let particles = [];
+// Create a small glowing dot that follows the cursor
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const cursorDot = document.createElement('div');
+cursorDot.style.position = 'fixed';
+cursorDot.style.width = '12px';
+cursorDot.style.height = '12px';
+cursorDot.style.borderRadius = '50%';
+cursorDot.style.backgroundColor = '#2563eb';
+cursorDot.style.boxShadow = '0 0 8px 2px #60a5fa';
+cursorDot.style.pointerEvents = 'none';
+cursorDot.style.transition = 'transform 0.1s ease';
+cursorDot.style.zIndex = '9999';
 
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+document.body.appendChild(cursorDot);
+
+document.addEventListener('mousemove', (e) => {
+  // Center the dot on cursor
+  cursorDot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
 });
-
-document.addEventListener("mousemove", (e) => {
-  for (let i = 0; i < 5; i++) {
-    particles.push(new Particle(e.clientX, e.clientY));
-  }
-});
-
-class Particle {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.size = Math.random() * 4 + 1;
-    this.speedX = Math.random() * 2 - 1;
-    this.speedY = Math.random() * 2 - 1;
-    this.opacity = 1;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.opacity -= 0.02;
-  }
-
-  draw() {
-    ctx.fillStyle = `rgba(66, 153, 225, ${this.opacity})`;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles = particles.filter((p) => p.opacity > 0);
-  particles.forEach((p) => {
-    p.update();
-    p.draw();
-  });
-  requestAnimationFrame(animate);
-}
-
-animate();

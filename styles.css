@@ -1,89 +1,103 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f7fa;
-  color: #333;
-  overflow: hidden;
+/* Reset & base */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fbfc;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 30px;
   display: flex;
   align-items: center;
-  padding: 15px 30px;
-  background: #ffffffee;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .logo {
   height: 50px;
-  margin-right: auto;
+  margin-right: 40px;
 }
 
 nav ul {
-  display: flex;
-  gap: 20px;
   list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: #1e40af;
-  font-weight: bold;
+  font-weight: 600;
+  color: #1e3a8a;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: #2563eb;
   text-decoration: underline;
 }
 
-.container {
-  padding: 40px 60px;
+/* Main container and sections */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-section {
-  margin-bottom: 60px;
+.section {
+  margin-bottom: 50px;
 }
 
+/* Headings */
 h1, h2 {
   color: #1e3a8a;
-  border-bottom: 2px solid #1e3a8a;
-  padding-bottom: 5px;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 6px;
   margin-bottom: 20px;
 }
 
 .highlight {
-  color: #2563eb;
   background-color: #dbeafe;
-  padding: 2px 6px;
-  border-radius: 4px;
+  color: #2563eb;
+  padding: 3px 8px;
+  border-radius: 5px;
 }
 
+/* Lists */
 ul {
   margin-top: 10px;
   padding-left: 20px;
+  color: #444;
 }
 
+li {
+  margin-bottom: 8px;
+}
+
+/* Buttons */
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  background: #2563eb;
+  background-color: #2563eb;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #1e3a8a;
-}
-
-#cursorCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 0;
+  cursor: pointer;
 }
