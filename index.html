@@ -22,12 +22,14 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            justify-content: flex-start;
+            flex-direction: row;
         }
         header h1 {
             font-size: 2.5em;
             margin-bottom: 0;
+            margin-right: auto;
+            text-align: left;
         }
         header img{
             margin-bottom: 20px;
@@ -121,6 +123,13 @@
             main p {
                 font-size: 1em;
             }
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            header h1{
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -140,49 +149,49 @@
     </nav>
     <main>
         <section id="home">
-            <h2>Welcome to SkyStaq Solutions</h2>
-            <p>Empowering your career through industry-relevant IT training! At SkyStaq Solutions, we bridge the gap between theoretical learning and real-world expertise. Whether you're a fresher or an experienced professional looking to upgrade your skills, we offer top-notch training in the most in-demand technologies. Join us and transform your learning journey into a successful career path.</p>
+            <h2 style="text-align: left;">Welcome to SkyStaq Solutions</h2>
+            <p style="text-align: left;">Empowering your career through industry-relevant IT training! At SkyStaq Solutions, we bridge the gap between theoretical learning and real-world expertise. Whether you're a fresher or an experienced professional looking to upgrade your skills, we offer top-notch training in the most in-demand technologies. Join us and transform your learning journey into a successful career path.</p>
         </section>
         <section id="about">
-            <h2>About SkyStaq Solutions</h2>
-            <p>SkyStaq Solutions is a premier IT training and upskilling provider focused on delivering quality education through expert-led sessions, practical curriculum, and career-driven support. Based on real-world scenarios and project-based learning, our goal is to make every learner job-ready. With a strong reputation for integrity, hands-on learning, and student satisfaction, SkyStaq Solutions has become a trusted name for IT professionals seeking growth in today’s dynamic tech environment.</p>
+            <h2 style="text-align: left;">About SkyStaq Solutions</h2>
+            <p style="text-align: left;">SkyStaq Solutions is a premier IT training and upskilling provider focused on delivering quality education through expert-led sessions, practical curriculum, and career-driven support. Based on real-world scenarios and project-based learning, our goal is to make every learner job-ready. With a strong reputation for integrity, hands-on learning, and student satisfaction, SkyStaq Solutions has become a trusted name for IT professionals seeking growth in today’s dynamic tech environment.</p>
         </section>
         <section id="courses">
-            <h2>Our Courses Offer Career-Aligned Curriculum</h2>
-            <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
-            <h3>&#128640; Cloud Platforms</h3>
-            <p>AWS: Core services, IAM, EC2, S3, VPC, Lambda, DevOps on AWS.</p>
-            <p>GCP: Google Compute Engine, GKE, Cloud Storage, IAM, Cloud Functions.</p>
-            <p>Azure: Azure VMs, Networking, Storage, App Services, Azure DevOps.</p>
-            <h3>&#128696; DevOps &amp; Microservices</h3>
-            <p>DevOps: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines.</p>
-            <p>Microservices: Architecture principles, Spring Boot, REST APIs, Dockerized services.</p>
-            <h3>&#128100; Programming &amp; ITSM</h3>
-            <p>Python: Core Python, OOP, APIs, Django basics.</p>
-            <p>Java: Core Java, JDBC, Servlets, Spring Framework.</p>
-            <p>ServiceNow: Admin, Development, Workflows, Integration.</p>
-            <p>Salesforce: Admin, Development, Apex, Lightning Components.</p>
-            <p>Each course includes real-time projects, certification guidance, and placement support.</p>
+            <h2 style="text-align: left;">Our Courses Offer Career-Aligned Curriculum</h2>
+            <p style="text-align: left;">We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
+            <h3 style="text-align: left;">&#128640; Cloud Platforms</h3>
+            <p style="text-align: left;">AWS: Core services, IAM, EC2, S3, VPC, Lambda, DevOps on AWS.</p>
+            <p style="text-align: left;">GCP: Google Compute Engine, GKE, Cloud Storage, IAM, Cloud Functions.</p>
+            <p style="text-align: left;">Azure: Azure VMs, Networking, Storage, App Services, Azure DevOps.</p>
+            <h3 style="text-align: left;">&#128696; DevOps &amp; Microservices</h3>
+            <p style="text-align: left;">DevOps: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines.</p>
+            <p style="text-align: left;">Microservices: Architecture principles, Spring Boot, REST APIs, Dockerized services.</p>
+            <h3 style="text-align: left;">&#128100; Programming &amp; ITSM</h3>
+            <p style="text-align: left;">Python: Core Python, OOP, APIs, Django basics.</p>
+            <p style="text-align: left;">Java: Core Java, JDBC, Servlets, Spring Framework.</p>
+            <p style="text-align: left;">ServiceNow: Admin, Development, Workflows, Integration.</p>
+            <p style="text-align: left;">Salesforce: Admin, Development, Apex, Lightning Components.</p>
+            <p style="text-align: left;">Each course includes real-time projects, certification guidance, and placement support.</p>
         </section>
         <section id="experts">
-            <h2>Learn from Certified Professionals</h2>
-            <p>Our trainers are seasoned industry professionals with rich experience in leading MNCs. They bring real-time project knowledge, current trends, and in-depth technical understanding to the classroom. We don’t just teach – we mentor, guide, and prepare you for real-world challenges.</p>
-            <ul>
+            <h2 style="text-align: left;">Learn from Certified Professionals</h2>
+            <p style="text-align: left;">Our trainers are seasoned industry professionals with rich experience in leading MNCs. They bring real-time project knowledge, current trends, and in-depth technical understanding to the classroom. We don’t just teach – we mentor, guide, and prepare you for real-world challenges.</p>
+            <ul style="text-align: left;">
                 <li>Certified AWS, Azure, GCP Architects</li>
                 <li>DevOps Engineers from top cloud consulting firms</li>
                 <li>ServiceNow &amp; Salesforce Certified Professionals</li>
                 <li>Experienced Java &amp; Python Developers</li>
             </ul>
-            <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&amp;A interaction to ensure complete clarity.</p>
+            <p style="text-align: left;">At SkyStaq, every session is a blend of concepts, live demos, and Q&amp;A interaction to ensure complete clarity.</p>
         </section>
         <section id="contact">
-            <h2>Get in Touch with SkyStaq Solutions</h2>
-            <p>&#128241; Mobile: +91-9949955189</p>
-            <p>&#128159; Email: info@skystaq.in</p>
-            <p>&#127757; Website: www.skystaq.in</p>
-            <a href="https://forms.gle/CpBWV7w6qkkFGGqx6" class="inquiry-button" target="_blank">Submit Inquiry</a>
-            <p>Interested in a course or need guidance?</p>
-            <p>Submit your enquiry and our support team will reach out to you at the earliest. Your learning journey starts here!</p>
+            <h2 style="text-align: left;">Get in Touch with SkyStaq Solutions</h2>
+            <p style="text-align: left;">&#128241; Mobile: +91-9949955189</p>
+            <p style="text-align: left;">&#128159; Email: info@skystaq.in</p>
+            <p style="text-align: left;">&#127757; Website: www.skystaq.in</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSflD0z969vK_jLpB_eL9HjM9hL3j5C8KeB83Fv-z9L9gE9Xw/viewform?usp=sf_link" class="inquiry-button" target="_blank" style="margin-left: 0;">Submit Inquiry</a>
+            <p style="text-align: left;">Interested in a course or need guidance?</p>
+            <p style="text-align: left;">Submit your enquiry and our support team will reach out to you at the earliest. Your learning journey starts here!</p>
         </section>
     </main>
     <footer>
