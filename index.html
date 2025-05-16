@@ -30,6 +30,11 @@
       color: #005fa3;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
     /* Navbar */
     header {
       background-color: #ffffff;
@@ -41,6 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .nav-links {
@@ -63,8 +69,9 @@
     }
 
     .logo {
-      height: 100px;
-      margin-left: 20px; /* Adjust value as needed */
+      max-height: 80px;
+      height: auto;
+      margin-left: 20px;
     }
 
     /* Main content */
@@ -124,6 +131,34 @@
       background-color: #005fa3;
     }
 
+    .course-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .course-card .course-logo {
+      max-width: 100px;
+      max-height: 80px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .course-details h3 {
+      margin-top: 0;
+      color: #0077cc;
+    }
+
+    .course-details ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
     /* Responsive */
     @media (max-width: 700px) {
       header {
@@ -141,6 +176,21 @@
       main {
         padding: 0 15px;
       }
+
+      .course-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .course-card .course-logo {
+        max-width: 80px;
+        margin-bottom: 15px;
+      }
+
+      .course-details ul {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -155,7 +205,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
-  
 
   <main>
     <section id="home">
@@ -184,45 +233,7 @@
       </p>
     </section>
 
-   <!-- <section id="courses">
-      <h2>Our Courses Offer Career-Aligned Curriculum</h2>
-      <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments:</p>
-      <ul>
-        <li>🚀 <strong>Cloud Platforms:</strong> AWS, GCP, Azure</li>
-        <li>🛠️ <strong>DevOps & Microservices:</strong> Jenkins, Docker, Kubernetes, Terraform, CI/CD</li>
-        <li>💻 <strong>Programming & ITSM:</strong> Python, Java, ServiceNow, Salesforce</li>
-      </ul>
-      <p>Each course includes real-time projects, certification guidance, resume building, and mock interviews.</p>
-    </section> -->
-
     <!-- Courses Section -->
-    <style>
-      .course-card {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        margin-bottom: 30px;
-      }
-      .course-card .course-logo {
-        max-width: 100px;
-        max-height: 80px;
-        object-fit: contain;
-        flex-shrink: 0;
-      }
-      .course-details h3 {
-        margin-top: 0;
-        color: #0077cc;
-      }
-      .course-details ul {
-        padding-left: 20px;
-        margin: 0;
-      }
-    </style>
-    
     <div class="course-card">
       <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Course" />
       <div class="course-details">
@@ -238,7 +249,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="course-card">
       <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="GCP Course" />
       <div class="course-details">
@@ -252,7 +263,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="course-card">
       <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure Course" />
       <div class="course-details">
@@ -266,9 +277,9 @@
         </ul>
       </div>
     </div>
-    
+
     <h2>🛠️ DevOps & Microservices</h2>
-    
+
     <div class="course-card">
       <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git Course" />
       <div class="course-details">
@@ -282,7 +293,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="course-card">
       <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker Course" />
       <div class="course-details">
@@ -295,7 +306,7 @@
         </ul>
       </div>
     </div>
-    
+
     <section id="experts">
       <h2>Learn from Certified Professionals</h2>
       <ul>
