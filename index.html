@@ -5,103 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SkyStaq Solutions</title>
   <style>
-    /* Reset & base */
+    /* Base Reset & Fonts */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background: #121212;
-      color: #ddd;
+      background-color: #f9fbfd;
+      color: #333;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
+
     a {
-      color: #1e90ff;
+      color: #0077cc;
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     a:hover {
-      color: #63a4ff;
+      color: #005fa3;
     }
 
     /* Navbar */
     header {
-      background-color: #1f1f1f;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
       padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.7);
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
+
     .nav-links {
       list-style: none;
       display: flex;
       gap: 25px;
       font-weight: 600;
-      font-size: 1.1rem;
-      flex: 1; /* Take all available horizontal space */
+      font-size: 1rem;
     }
+
     .nav-links li a {
       padding: 8px 12px;
-      border-radius: 4px;
+      border-radius: 6px;
     }
+
     .nav-links li a:hover,
     .nav-links li a.active {
-      background-color: #1e90ff;
+      background-color: #0077cc;
       color: #fff;
     }
 
-    /* Logo */
     .logo {
-      height: 60px;
-      object-fit: contain;
-      cursor: pointer;
-      filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7));
-      margin-left: 20px;
+      height: 50px;
     }
 
-    /* Container & sections */
+    /* Main content */
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     section {
-      margin-bottom: 60px;
-      background: #1e1e1e;
+      margin-bottom: 50px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
       padding: 30px 40px;
-      border-radius: 8px;
-      box-shadow: 0 6px 15px rgba(30, 144, 255, 0.2);
-    }
-    section h2 {
-      margin-bottom: 20px;
-      color: #1e90ff;
-      border-bottom: 2px solid #1e90ff;
-      padding-bottom: 6px;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    p, ul {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-    ul {
-      margin-left: 20px;
-      list-style-type: square;
-    }
-    ul li {
-      margin-bottom: 8px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 119, 204, 0.06);
     }
 
-    /* Button style */
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 8px;
+    }
+
+    p, ul {
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 20px;
+      list-style: disc;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
     .btn-enquiry {
       display: inline-block;
-      background-color: #1e90ff;
+      background-color: #0077cc;
       color: #fff;
       padding: 12px 26px;
       border-radius: 25px;
@@ -113,31 +118,34 @@
       text-decoration: none;
       margin-top: 20px;
     }
+
     .btn-enquiry:hover {
-      background-color: #63a4ff;
+      background-color: #005fa3;
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       header {
         flex-direction: column;
+        align-items: flex-start;
         gap: 15px;
       }
+
       .nav-links {
         flex-direction: column;
         gap: 10px;
-        align-items: center;
-        flex: none; /* Reset flex on small screens */
+        align-items: flex-start;
       }
+
       main {
-        margin: 20px 15px;
-        padding: 0 10px;
+        padding: 0 15px;
       }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="SkyStaq_logo.PNG" alt="SkyStaq Logo" class="logo" />
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -145,7 +153,6 @@
       <li><a href="#experts">Experts</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <img src="SkyStaq_logo.PNG" alt="SkyStaq Logo" class="logo" />
   </header>
 
   <main>
@@ -154,9 +161,9 @@
       <p>
         Empowering your career through industry-relevant IT training! At SkyStaq Solutions,
         we bridge the gap between theoretical learning and real-world expertise. Whether
-        you're a fresher or an experienced professional looking to upgrade your skills, 
-        we offer top-notch training in the most in-demand technologies. Join us and transform
-        your learning journey into a successful career path.
+        you're a fresher or an experienced professional, we offer top-notch training in 
+        the most in-demand technologies. Join us and transform your learning journey into 
+        a successful career path.
       </p>
     </section>
 
@@ -177,24 +184,24 @@
 
     <section id="courses">
       <h2>Our Courses Offer Career-Aligned Curriculum</h2>
-      <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments.</p>
+      <p>We offer structured, job-oriented courses with hands-on labs, projects, and cloud-based learning environments:</p>
       <ul>
-        <li>🚀 <strong>Cloud Platforms</strong>: AWS (Core services, IAM, EC2, S3, VPC, Lambda, DevOps), GCP (Compute Engine, GKE, Cloud Storage), Azure (VMs, Networking, DevOps)</li>
-        <li>🛠️ <strong>DevOps & Microservices</strong>: Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, CI/CD pipelines, Microservices Architecture, Spring Boot, REST APIs</li>
-        <li>💻 <strong>Programming & ITSM</strong>: Python, Java, ServiceNow, Salesforce — including Admin, Development, Workflows, Integration</li>
+        <li>🚀 <strong>Cloud Platforms:</strong> AWS, GCP, Azure</li>
+        <li>🛠️ <strong>DevOps & Microservices:</strong> Jenkins, Docker, Kubernetes, Terraform, CI/CD</li>
+        <li>💻 <strong>Programming & ITSM:</strong> Python, Java, ServiceNow, Salesforce</li>
       </ul>
-      <p>Each course includes real-time projects, certification guidance, placement support, resume building, mock interviews, and post job assistance.</p>
+      <p>Each course includes real-time projects, certification guidance, resume building, and mock interviews.</p>
     </section>
 
     <section id="experts">
       <h2>Learn from Certified Professionals</h2>
       <ul>
         <li>Certified AWS, Azure, GCP Architects</li>
-        <li>DevOps Engineers from top cloud consulting firms</li>
-        <li>ServiceNow & Salesforce Certified Professionals</li>
+        <li>DevOps Engineers from leading firms</li>
+        <li>ServiceNow & Salesforce Experts</li>
         <li>Experienced Java & Python Developers</li>
       </ul>
-      <p>At SkyStaq, every session is a blend of concepts, live demos, and Q&A interaction to ensure complete clarity.</p>
+      <p>Every session combines theory, live demos, and interactive Q&A for complete clarity.</p>
     </section>
 
     <section id="contact">
@@ -208,4 +215,3 @@
   </main>
 </body>
 </html>
-
