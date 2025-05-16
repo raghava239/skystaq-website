@@ -196,11 +196,35 @@
     </section> -->
 
     <!-- Courses Section -->
-  <section id="courses">
-    <h2>Our Courses</h2>
-
+    <style>
+      .course-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+      .course-card .course-logo {
+        max-width: 100px;
+        max-height: 80px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+      .course-details h3 {
+        margin-top: 0;
+        color: #0077cc;
+      }
+      .course-details ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+    </style>
+    
     <div class="course-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Course" />
+      <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Course" />
       <div class="course-details">
         <h3>Amazon Web Services (AWS)</h3>
         <ul>
@@ -214,9 +238,9 @@
         </ul>
       </div>
     </div>
-
+    
     <div class="course-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="GCP Course" />
+      <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="GCP Course" />
       <div class="course-details">
         <h3>Google Cloud Platform (GCP)</h3>
         <ul>
@@ -228,9 +252,9 @@
         </ul>
       </div>
     </div>
-
+    
     <div class="course-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure Course" />
+      <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure Course" />
       <div class="course-details">
         <h3>Microsoft Azure</h3>
         <ul>
@@ -242,17 +266,36 @@
         </ul>
       </div>
     </div>
-
+    
     <h2>🛠️ DevOps & Microservices</h2>
-
+    
     <div class="course-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git Course" />
+      <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git Course" />
       <div class="course-details">
         <h3>Version Control & CI/CD</h3>
         <ul>
           <li>Git: Branching, pull requests, GitHub/GitLab workflows</li>
-          <li>Jenkins: Pipelines, plugins, agents</li
-
+          <li>Jenkins: Pipelines, plugins, agents</li>
+          <li>Docker: Containerization, Dockerfiles, images, registries</li>
+          <li>Kubernetes: Pods, deployments, services, ingress</li>
+          <li>Helm: Chart management, releases</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="course-card">
+      <img class="course-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker Course" />
+      <div class="course-details">
+        <h3>Containerization & Orchestration</h3>
+        <ul>
+          <li>Docker Basics: Images, containers, volumes, networks</li>
+          <li>Docker Compose: Multi-container apps</li>
+          <li>Kubernetes Fundamentals: Cluster architecture, pods, nodes</li>
+          <li>Istio & Service Mesh: Traffic management, observability</li>
+        </ul>
+      </div>
+    </div>
+    
     <section id="experts">
       <h2>Learn from Certified Professionals</h2>
       <ul>
