@@ -107,6 +107,41 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* --- Logo Carousel Animation --- */
+        .logo-carousel-container {
+            overflow: hidden; /* Hide overflowing parts of the animation */
+            white-space: nowrap; /* Prevent items from wrapping */
+            position: relative;
+            width: 100%; /* Ensure it takes full width to enable continuous scroll */
+        }
+
+        .logo-carousel {
+            display: flex;
+            animation: scroll-left-to-right 30s linear infinite; /* Adjust duration as needed */
+            padding: 20px 0; /* Add some vertical padding */
+            gap: 8rem; /* Increased gap between logos */
+        }
+
+        .logo-carousel:hover {
+            animation-play-state: paused; /* Pause on hover */
+        }
+
+        @keyframes scroll-left-to-right {
+            0% {
+                transform: translateX(-100%); /* Start from left (off-screen) */
+            }
+            100% {
+                transform: translateX(100%); /* End at right (off-screen) */
+            }
+        }
+
+        /* Duplicate logos for seamless looping */
+        .logo-carousel img {
+            display: inline-block; /* Ensure images are in a line */
+            flex-shrink: 0; /* Prevent images from shrinking */
+            margin-right: 8rem; /* Ensure consistent spacing */
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -140,17 +175,29 @@
     </section>
 
     <section class="brands bg-white py-12 px-6 md:px-12 shadow-inner">
-        <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-600 mb-8">Empowering Success with Technologies from Industry Leaders</h2>
-        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo" class="h-10 md:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Tranings_Logo.svg" alt="Amazon Web Tranings Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://e7.pngegg.com/pngimages/102/597/png-clipart-computer-programming-git-software-development-programmer-version-control-github-logo-text-trademark.png" alt="Git Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFENc6mCYABRY3JN_kEDJx7ahneMDuSbnHFw&s" alt="Docker Logo" class="h-10 md:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-8 md:h-10 opacity-80 hover:opacity-100 transition-opacity duration-300">
+        <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-600 mb-8">We provide trainings for all below platforms and products by Senior leading experts from industry</h2>
+        <div class="logo-carousel-container">
+            <div class="logo-carousel">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo" class="h-10 md:h-12 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://e7.pngegg.com/pngimages/102/597/png-clipart-computer-programming-git-software-development-programmer-version-control-github-logo-text-trademark.png" alt="Git Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFENc6mCYABRY3JN_kEDJx7ahneMDuSbnHFw&s" alt="Docker Logo" class="h-10 md:h-12 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-8 md:h-10 opacity-80">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo" class="h-10 md:h-12 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://e7.pngegg.com/pngimages/102/597/png-clipart-computer-programming-git-software-development-programmer-version-control-github-logo-text-trademark.png" alt="Git Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFENc6mCYABRY3JN_kEDJx7ahneMDuSbnHFw&s" alt="Docker Logo" class="h-10 md:h-12 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo" class="h-8 md:h-10 opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-8 md:h-10 opacity-80">
+            </div>
         </div>
     </section>
 
@@ -179,8 +226,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Tranings_Logo.svg" alt="Amazon Web Tranings Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Amazon Web Tranings (AWS)</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" />
+                <h3 class="text-xl font-bold mb-2 text-gray-800">Amazon Web Services (AWS)</h3>
                 <ul>
                     <li><strong>Core Concepts:</strong> AWS ecosystem, infrastructure, pricing</li>
                     <li><strong>IAM:</strong> Users, groups, policies, roles</li>
@@ -213,7 +260,7 @@
                     <strong>Virtual Machines (VMs):</strong> VM provisioning, disks, extensions, availability sets<br>
                     <strong>Azure Networking:</strong> VNets, NSGs, Load Balancers, Application Gateways<br>
                     <strong>Azure DevOps:</strong> Repos, Pipelines, Boards, Artifacts<br>
-                    <strong>Storage Tranings:</strong> Blob, Queue, Table, and File Storage<br>
+                    <strong>Storage Services:</strong> Blob, Queue, Table, and File Storage<br>
                     <strong>Monitoring:</strong> Azure Monitor, Log Analytics, Application Insights
                 </p>
                 <a href="#" class="inline-block mt-6 text-accent-blue font-medium hover:underline text-base">Learn More &rarr;</a>
@@ -221,11 +268,11 @@
 
             <div class="course-card">
                 <img src="https://e7.pngegg.com/pngimages/102/597/png-clipart-computer-programming-git-software-development-programmer-version-control-github-logo-text-trademark.png" alt="Git Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">DevOps & MicroTranings</h3>
+                <h3 class="text-xl font-bold mb-2 text-gray-800">DevOps & Microservices</h3>
                 <p>
                     <strong>Version Control & CI/CD:</strong> Git (branching, pull requests, GitHub/GitLab), Jenkins (pipelines, plugins)<br>
                     <strong>Containerization:</strong> Docker (containers, Dockerfiles, images)<br>
-                    <strong>Orchestration:</strong> Kubernetes (pods, deployments, Tranings, ingress), Helm (chart management)
+                    <strong>Orchestration:</strong> Kubernetes (pods, deployments, services, ingress), Helm (chart management)
                 </p>
                 <a href="#" class="inline-block mt-6 text-accent-blue font-medium hover:underline text-base">Learn More &rarr;</a>
             </div>
@@ -243,7 +290,7 @@
             </div>
 
             <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/ServiceNow_logo.svg/300px-ServiceNow_logo.svg.png" alt="ServiceNow Logo" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" />
                 <h3 class="text-xl font-bold mb-2 text-gray-800">ServiceNow</h3>
                 <p>
                     <strong>ITSM:</strong> Incident, Problem, Change, Request Management<br>
@@ -273,8 +320,8 @@
                 <p>
                     <strong>Core Java:</strong> Fundamentals, OOPs, Collections<br>
                     <strong>Advanced Java:</strong> Multithreading, JDBC, Servlets, JSP<br>
-                    <strong>Spring Boot:</strong> MicroTranings, REST APIs, Web Development<br>
-                    <strong>MicroTranings:</strong> Design Patterns, Deployment<br>
+                    <strong>Spring Boot:</strong> Microservices, REST APIs, Web Development<br>
+                    <strong>Microservices:</strong> Design Patterns, Deployment<br>
                     <strong>Hibernate & JPA:</strong> ORM, Database Interaction
                 </p>
                 <a href="#" class="inline-block mt-6 text-accent-blue font-medium hover:underline text-base">Learn More &rarr;</a>
@@ -327,7 +374,7 @@
                 <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="#home" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Home</a></li>
-                    <li><a href="#Tranings" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Tranings</a></li>
+                    <li><a href="#Tranings" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Trainings</a></li>
                     <li><a href="#about-us" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">About Us</a></li>
                     <li><a href="#contact" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Contact Us</a></li>
                 </ul>
