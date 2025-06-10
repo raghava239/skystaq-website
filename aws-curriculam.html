@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyStaq Technologies – AWS Course Syllabus</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* A very light blue/off-white for background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a73e8; /* A vibrant blue for the header */
+            color: white; /* White text for header */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content horizontally */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            max-width: 1200px; /* Limit header content width */
+            width: 100%;
+        }
+
+        header .logo {
+            height: 60px; /* Adjust logo size as needed */
+            margin-right: 15px;
+            filter: brightness(1.2); /* Slightly brightens the logo for better contrast on blue */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: white; /* White text for the header title */
+        }
+
+        /* Main Content Area */
+        main {
+            background-color: #ffffff; /* White background below header */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto; /* Center the main content with some top/bottom margin */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e3f2fd; /* Light blue background for contact info */
+            border-radius: 5px;
+            border: 1px solid #bbdefb;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #424242;
+        }
+
+        .contact-info a {
+            color: #1565c0; /* Darker blue for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Syllabus Section */
+        .syllabus h2 {
+            text-align: center;
+            color: #1a73e8; /* Blue for syllabus main title */
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .syllabus h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #1a73e8; /* Blue underline */
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .module {
+            margin-bottom: 30px;
+            padding: 15px 20px;
+            border: 1px solid #e0e0e0; /* Light gray border */
+            border-left: 5px solid #42a5f5; /* Blue accent on the left */
+            border-radius: 8px;
+            background-color: #ffffff;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .module:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .module h3 {
+            color: #2196f3; /* A medium blue for module titles */
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0f2f7;
+            padding-bottom: 10px;
+        }
+
+        .module ul {
+            list-style-type: square; /* Square bullets */
+            padding-left: 25px;
+            margin: 0;
+        }
+
+        .module li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1a73e8; /* Blue */
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 30px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .header-content {
+                flex-direction: column;
+            }
+
+            header .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+                height: 50px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            main {
+                margin: 10px auto;
+                padding: 15px;
+            }
+
+            .syllabus h2 {
+                font-size: 2em;
+            }
+
+            .module h3 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            .contact-info p {
+                font-size: 0.9em;
+            }
+
+            .syllabus h2 {
+                font-size: 1.8em;
+            }
+
+            .module h3 {
+                font-size: 1.2em;
+            }
+
+            .module li {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="https://github.com/raghava239/skystaq-website/blob/main/SkyStaq_updated_01.png?raw=true" alt="SkyStaq Logo" class="logo">
+            <h1>SkyStaq Technologies – AWS Course Syllabus</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <p>📞 Contact: +91-9949955189</p>
+            <p>✉️ Email: skystaq@gmail.com</p>
+            <p>🌐 Web: <a href="http://www.skystaq.in" target="_blank">www.skystaq.in</a></p>
+        </section>
+
+        <section class="syllabus">
+            <h2>AWS Course Syllabus</h2>
+
+            <div class="module">
+                <h3>Module 1: Introduction</h3>
+                <ul>
+                    <li>Introduction to AWS Cloud</li>
+                    <li>What is History AWS</li>
+                    <li>IAAS Overview</li>
+                    <li>PAAS Overview</li>
+                    <li>SAAS Overview</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 2: Basic of Linux for AWS</h3>
+                <ul>
+                    <li>cd, mkdir, ls, jobs, chmod, vim, vi</li>
+                    <li>cat, gzip, and many more commands</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 3: Amazon Elastic Compute Cloud (EC2)</h3>
+                <ul>
+                    <li>Different instance types</li>
+                    <li>AMIs</li>
+                    <li>Volumes</li>
+                    <li>Snapshots</li>
+                    <li>EIPs</li>
+                    <li>Key Pairs</li>
+                    <li>Security Groups</li>
+                    <li>Network Interface</li>
+                    <li>Load Balancers</li>
+                    <li>Auto Scaling</li>
+                    <li>Tags</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 4: AWS S3</h3>
+                <ul>
+                    <li>What is S3</li>
+                    <li>Creating of Buckets & Objects</li>
+                    <li>Adding Objects to buckets</li>
+                    <li>Notifications</li>
+                    <li>S3 data encryption types</li>
+                    <li>Hosting a static website</li>
+                    <li>Pre-signed URL</li>
+                    <li>Permissions</li>
+                    <li>Distributions</li>
+                    <li>Relation between CloudFront, S3 Glacier</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 5: VPC (Virtual Private Cloud)</h3>
+                <ul>
+                    <li>VPC Basics</li>
+                    <li>Public Subnet & Private Subnet</li>
+                    <li>Network Access Control Lists</li>
+                    <li>Difference between Network ACL & Security Group</li>
+                    <li>Difference between NAT Instance & NAT Gateway</li>
+                    <li>Creating of route table</li>
+                    <li>Creation of Internet Gateways (IGW)</li>
+                    <li>DHCP Option Sets</li>
+                    <li>DNS (Route 53)</li>
+                    <li>Launch Server with VPC</li>
+                    <li>VPC Peering</li>
+                    <li>VPN Overview & Components</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 6: IAM (Identity and Access Management)</h3>
+                <ul>
+                    <li>Creation of user accounts</li>
+                    <li>Creation of groups</li>
+                    <li>Basics of AWS permissions</li>
+                    <li>Creation of roles</li>
+                    <li>Difference between roles & policies</li>
+                    <li>What is IAM Profile</li>
+                    <li>Creation of custom policies for delegation</li>
+                    <li>Setting up Multi-Factor Authentication (MFA)</li>
+                    <li>User permissions</li>
+                    <li>Access Key & Secret Key</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 7: RDS (Relational Database Service)</h3>
+                <ul>
+                    <li>DB Instances</li>
+                    <li>Creating your database</li>
+                    <li>RDS Limits</li>
+                    <li>Setting up automatic backups, snapshots & restores</li>
+                    <li>Managing MySQL database server</li>
+                    <li>Deleting or rebooting a DB Instance</li>
+                    <li>Working with storage types</li>
+                    <li>Security using IAM to manage access to Amazon RDS resources</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 8: Direct Connect</h3>
+                <ul>
+                    <li>What is dedicated network connection</li>
+                    <li>How to establish private connection between AWS & your data center</li>
+                    <li>Configure virtual interface</li>
+                    <li>Connect your network to AWS</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 9: Route 53</h3>
+                <ul>
+                    <li>Configuring Amazon Route 53 as your DNS Service</li>
+                    <li>Registering a Domain Name and configuring as the DNS Service</li>
+                    <li>Migrating DNS Service for an existing domain to Amazon Route 53</li>
+                    <li>How to create hosted zone</li>
+                    <li>Types (CNAME, IP address, MX)</li>
+                    <li>Working with private hosted zones</li>
+                    <li>Change reference and meet CNAME</li>
+                    <li>Creating, updating, and deleting health checks</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 10: ElasticCache</h3>
+                <ul>
+                    <li>ElasticCache terminology and concept</li>
+                    <li>Backup and restore</li>
+                    <li>Clusters explanation</li>
+                    <li>Managing ElasticCache</li>
+                    <li>Managing replication groups</li>
+                    <li>DNS Names and Underlying</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 11: Config</h3>
+                <ul>
+                    <li>How to provide an inventory of your AWS resources & a history of configuration changes to these resources</li>
+                    <li>Automatically discovers AWS resources using simple setup</li>
+                    <li>How to create customized rules</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 12: Elastic Beanstalk</h3>
+                <ul>
+                    <li>Creation of Web-App</li>
+                    <li>Building a sample application</li>
+                    <li>Modifying the properties of the deployment</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 13: Glacier</h3>
+                <ul>
+                    <li>Creating vaults</li>
+                    <li>Working with archives</li>
+                    <li>Accessing the Glacier vault using tools</li>
+                    <li>Data retrieval policy operation</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 14: SES (Simple Email Service)</h3>
+                <ul>
+                    <li>Email Services</li>
+                    <li>SMTP Services</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3>Module 15: SQS (Simple Queue Service)</h3>
+            </div>
+
+            <div class="module">
+                <h3>Module 16: SNS (Simple Notification Service)</h3>
+            </div>
+
+            <div class="module">
+                <h3>Module 17: CloudWatch</h3>
+            </div>
+
+            <div class="module">
+                <h3>Module 18: CloudFormation</h3>
+            </div>
+
+            <div class="module">
+                <h3>Module 19: CloudFront</h3>
+            </div>
+
+            <div class="module">
+                <h3>Module 20: CloudTrail</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; SkyStaq Technologies</p>
+    </footer>
+
+</body>
+</html>
