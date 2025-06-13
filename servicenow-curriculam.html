@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ServiceNow Modules Overview</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+      color: #2f2f2f;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1a936f;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th {
+      background-color: #1a936f;
+      color: white;
+      padding: 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 12px;
+      vertical-align: top;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td::before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #1a936f;
+      }
+
+      td:nth-of-type(1)::before { content: "S. No"; }
+      td:nth-of-type(2)::before { content: "Module Title"; }
+      td:nth-of-type(3)::before { content: "Topics Covered"; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ServiceNow Modules Overview</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>S. No</th>
+          <th>Module Title</th>
+          <th>Topics Covered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Introduction to ServiceNow</td><td>What is ServiceNow<br>Why and who can use ServiceNow<br>Concept of Cloud Computing in ServiceNow<br>Navigation and users<br>Helpful portals and releases<br>Forms, Lists, and Tables</td></tr>
+        <tr><td>2</td><td>ITIL Overview on ServiceNow</td><td>ITIL Concepts<br>ITIL Processes in ServiceNow</td></tr>
+        <tr><td>3</td><td>Configuring Users and Groups</td><td>Groups<br>Roles<br>Users</td></tr>
+        <tr><td>4</td><td>Basic Forms and List Modification</td><td>Personalizing Forms and Lists<br>Introduction to Fields<br>Plugins<br>Clearing ServiceNow cache<br>Removing paperclip from incident/problem/change</td></tr>
+        <tr><td>5</td><td>Applications and Modules – Overview</td><td>Modifying Menu Categories<br>Creating Application Menus and Modules<br>Module Link Types<br>Update Sets (Create, Select, Navigate, Merge)</td></tr>
+        <tr><td>6</td><td>Service Level Management (SLM)</td><td>SLA Components and Definition<br>SLA vs OLA vs Underpinning Contracts<br>Task SLA (Stages, Time-based fields)<br>SLA Workflow and Conditions<br>Installing SLA Plugins<br>Using Retro-Restart option</td></tr>
+        <tr><td>7</td><td>Access Control Rules (ACL)</td><td>Creating and managing ACLs for security</td></tr>
+        <tr><td>8</td><td>Service Catalog</td><td>Introduction to Items and Categories<br>Record Producers<br>Variables and Variable Sets<br>Creating Workflows<br>Associating Workflows to Items</td></tr>
+        <tr><td>9</td><td>Workflows</td><td>Using Workflows effectively in Service Catalog and SLA</td></tr>
+        <tr><td>10</td><td>Scheduled Jobs and Imports</td><td>Data Imports<br>Creating and defining Transform Maps<br>Creating Transform Scripts</td></tr>
+        <tr><td>11</td><td>UI Policies, Scripts, and Actions</td><td>Overview of UI Policies and Client Scripts<br>On Load Check Box<br>View-Specific UI Policies<br>Data Policies<br>Service Catalog UI Policies<br>UI15 vs UI16<br>Instance Branding<br>Creating Custom Homepage</td></tr>
+        <tr><td>12</td><td>User Administration and Security</td><td>Groups and Roles<br>Email Notifications<br>User Preferences<br>ACLs and Security Rules</td></tr>
+        <tr><td>13</td><td>Knowledge Management</td><td>Creating Knowledge Articles<br>Selecting Article Categories</td></tr>
+        <tr><td>14</td><td>Understanding Data and Relationships</td><td>One-to-Many, Many-to-Many, One-to-One Relationships<br>Custom Relationships<br>Database Table Inheritance</td></tr>
+        <tr><td>15</td><td>Service Portal</td><td>Introduction to Service Portal<br>Widgets and Components<br>Building and Customizing Service Portals</td></tr>
+        <tr><td>16</td><td>Scripting in ServiceNow</td><td>Client Scripts (onLoad, onChange, onSubmit)<br>Server Scripts<br>GlideForm & GlideRecord<br>Script Includes</td></tr>
+        <tr><td>17</td><td>Flow Designer</td><td>Introduction<br>Creating Flows<br>Triggers and Actions<br>Integration with Workflows</td></tr>
+        <tr><td>18</td><td>IntegrationHub</td><td>REST and SOAP Integration<br>Spokes<br>Using Outbound REST and Scripted REST APIs</td></tr>
+        <tr><td>19</td><td>App Engine Studio (AES)</td><td>Building Applications<br>Data Modeling<br>Experience and Process Design</td></tr>
+        <tr><td>20</td><td>Performance Analytics</td><td>KPIs and Dashboards<br>Widgets and Scorecards</td></tr>
+        <tr><td>21</td><td>Automated Test Framework (ATF)</td><td>Creating and Running Tests<br>Validating Changes</td></tr>
+        <tr><td>22</td><td>Integrations</td><td>Overview of integration methods in ServiceNow<br>Integrating external systems using REST<br>Authentication methods (OAuth, Basic, Mutual TLS)<br>Monitoring and troubleshooting integrations</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
