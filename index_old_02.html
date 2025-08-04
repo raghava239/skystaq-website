@@ -1,380 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStaq Technologies - Your Partner in IT Upskilling</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Custom styles not easily achievable with Tailwind or for overrides */
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333; /* Soft black for main text */
-            line-height: 1.6;
-        }
-
-        /* Fresh & Modern Color Palette (Soft Blue/Cyan & Grays) */
-        .header-bg, .footer-bg {
-            background-color: #2C3E50; /* Deep Dark Blue */
-            color: #ECF0F1; /* Off-white for text */
-        }
-        .hero-bg {
-            background-color: #F8FAFC; /* Very light cool gray/off-white */
-        }
-        .text-accent-blue {
-            color: #3498DB; /* Vibrant Sky Blue */
-        }
-        .btn-primary {
-            background-color: #3498DB; /* Vibrant Sky Blue */
-            color: #fff;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #2980B9; /* Darker Sky Blue */
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Logo visibility adjustments */
-        .header-logo {
-            filter: brightness(0) invert(1); /* Makes the logo white */
-            height: 75px; /* Slightly larger for prominence */
-        }
-
-        .footer-logo {
-            filter: brightness(0) invert(1); /* Makes the logo white */
-            height: 80px;
-        }
-
-        /* Course Card specific styles for consistency */
-        .course-card {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #E0E7ED; /* Subtle border from hero bg */
-        }
-
-        .course-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .course-card img, .course-card svg {
-            max-height: 60px; /* Increased size for course logos */
-            width: auto; /* Ensure aspect ratio is maintained */
-            margin-bottom: 20px;
-        }
-
-        .course-card ul {
-            list-style: none; /* Remove default bullet points */
-            padding: 0;
-            margin-top: 15px;
-            text-align: left; /* Align list items left */
-            width: 100%;
-        }
-
-        .course-card ul li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        .course-card ul strong {
-            color: #222;
-        }
-
-        .course-card p {
-            margin-top: 15px;
-            font-size: 0.95rem;
-            color: #555;
-            text-align: left;
-            width: 100%;
-        }
-
-        /* Utility for smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* --- Logo Carousel Animation --- */
-        .logo-carousel-container {
-            overflow: hidden; /* Hide overflowing parts of the animation */
-            white-space: nowrap; /* Prevent items from wrapping */
-            position: relative;
-            width: 100%; /* Ensure it takes full width to enable continuous scroll */
-        }
-
-        .logo-carousel {
-            display: flex;
-            animation: scroll-left-to-right 30s linear infinite; /* Adjust duration as needed */
-            padding: 20px 0; /* Add some vertical padding */
-            gap: 8rem; /* Increased gap between logos */
-        }
-
-        .logo-carousel:hover {
-            animation-play-state: paused; /* Pause on hover */
-        }
-
-        @keyframes scroll-left-to-right {
-            0% {
-                transform: translateX(-100%); /* Start from left (off-screen) */
-            }
-            100% {
-                transform: translateX(100%); /* End at right (off-screen) */
-            }
-        }
-
-        /* Duplicate logos for seamless looping */
-        .logo-carousel img {
-            display: inline-block; /* Ensure images are in a line */
-            flex-shrink: 0; /* Prevent images from shrinking */
-            margin-right: 8rem; /* Ensure consistent spacing */
-            height: 60px; /* Increased logo height */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyStaq Technologies - Your Partner in IT Upskilling</title>
+  <meta name="description" content="SkyStaq Technologies offers cutting-edge IT training programs in AWS, Azure, GCP, DevOps, Kubernetes, ServiceNow, Salesforce, and more. Learn from certified professionals and advance your career today." />
+  <meta name="keywords" content="SkyStaq, skystaq, skystaq technologies, IT Training, AWS Certification, Azure Training, GCP Courses, DevOps Certification, Kubernetes Training, ServiceNow, Salesforce, Cloud Computing, IT Upskilling, Hyderabad, India, IT Career, Online Courses, Tech Certification" />
+  <meta name="author" content="SkyStaq Technologies" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --maroon: #550000;
+      --white: #fff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--maroon);
+      min-height: 100vh;
+      margin: 0;
+    }
+    header {
+      background: var(--maroon);
+      color: var(--white);
+      box-shadow: 0 2px 16px 0 rgba(85,0,0,0.11);
+      z-index: 100;
+    }
+    .header-logo, .footer-logo {
+      filter: brightness(0) invert(1);
+      height: 60px;
+      width: auto;
+    }
+    .company-name {
+      color: var(--white);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-left: 15px;
+      white-space: nowrap;
+      letter-spacing: 1.5px;
+    }
+    nav a, .mobile-menu a {
+      color: var(--white);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.2s, color 0.2s;
+      position: relative;
+      text-decoration: none;
+    }
+    nav a:hover, .mobile-menu a:hover {
+      background: var(--white);
+      color: var(--maroon);
+    }
+    .btn-primary, .btn-secondary-accent, .btn-outline-maroon {
+      background: var(--maroon);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: none;
+      font-size: 1rem;
+      transition: background 0.2s, color 0.2s, transform 0.18s;
+      box-shadow: 0 2px 10px -2px #55000033;
+      cursor: pointer;
+      display: inline-block;
+      outline: none;
+    }
+    .btn-primary:hover, .btn-secondary-accent:hover, .btn-outline-maroon:hover, button:focus {
+      background: var(--white);
+      color: var(--maroon);
+      border: 2px solid var(--maroon);
+      transform: scale(1.05);
+    }
+    .btn-outline-maroon {
+      background: var(--white);
+      color: var(--maroon);
+      border: 2px solid var(--maroon);
+      font-weight: 700;
+    }
+    .btn-outline-maroon:hover {
+      background: var(--maroon);
+      color: var(--white);
+    }
+    /* Responsive and mobile menu */
+    @media (max-width: 768px) {
+      .company-name { font-size:1.22rem; margin-left:8px;}
+      nav { display: none;}
+      .mobile-menu-button { display: block !important; }
+    }
+    .mobile-menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: var(--maroon);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      z-index: 9999;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu a, .mobile-menu button {
+      font-size: 1.3rem;
+      margin: 13px 0;
+    }
+    .mobile-menu .btn-secondary-accent { margin-top: 18px;}
+    .hero-bg {
+      background: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: -90px;left: -130px;
+      width: 440px;height: 420px;
+      background: radial-gradient(circle, #f8e8e8 80%, transparent 100%);
+      opacity: 0.45;
+      z-index:0;
+    }
+    .text-accent {
+      color: var(--maroon);
+      font-weight: 700;
+    }
+    .hero-img img {
+      border:6px solid var(--white);
+      box-shadow: 0 6px 40px #55000018;
+      background: var(--white);
+      border-radius: 22px;
+    }
+    .course-card {
+      background: var(--white);
+      border-radius: 15px;
+      border: 2px solid #f5eaea;
+      padding: 28px 20px;
+      color: var(--maroon);
+      min-height: 410px;
+      box-shadow: 0 4px 18px -6px #55000015, 0 2px 9px -2px #55000012;
+      transition: box-shadow 0.25s, border 0.25s;
+      text-align: center;
+    }
+    .course-card img { max-height: 52px; }
+    .course-card h3 { color: var(--maroon);}
+    .course-card:hover {
+      border: 2px solid var(--maroon);
+      box-shadow: 0 6px 28px #5500002c;
+    }
+    .course-card .btn-primary { margin-top: 18px; }
+    .logo-carousel-container { position: relative; overflow: hidden; width:100%;}
+    .logo-carousel {
+      display:flex; gap:5rem; padding:17px 0;
+      animation: scroll-left-to-right 32s linear infinite;
+    }
+    .logo-carousel img {
+      height: 44px;
+      background:var(--white);
+      border-radius:8px;
+      box-shadow:0 1px 7px #55000019;
+      padding: 6px;
+      opacity: 0.88;
+    }
+    @keyframes scroll-left-to-right {0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .footer-bg {
+      background: var(--maroon);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-bg::before {
+      content: '';
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      left: 0; top: -40px;
+      background: url('data:image/svg+xml;utf8,<svg width="100%" height="40" viewBox="0 0 100 40" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C20,0 80,0 100,40 L100,40 L0,40 Z" fill="#fff"/></svg>');
+    }
+    .social-icons a {
+      color: var(--white);
+      opacity: 0.7;
+      background: transparent;
+      border-radius:50%;
+      transition: opacity 0.14s, background 0.16s, color 0.18s, transform 0.18s;
+    }
+    .social-icons a:hover {
+      opacity: 1;
+      background: var(--white);
+      color: var(--maroon);
+      transform: scale(1.23) rotate(-7deg);
+    }
+    .live-chat {
+      position: fixed;
+      right: 1.7rem; bottom: 1.2rem;
+      background: var(--maroon);
+      color: var(--white);
+      border-radius: 100px;
+      padding: 1rem 1.6rem;
+      min-width: 58px;
+      font-size: 1rem;
+      display:flex; align-items:center; gap:0.9ch;
+      box-shadow: 0 7px 24px #55000033;
+      font-weight: 600;
+      z-index: 99999;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+      animation: livechat-bounce 3s infinite;
+      border: 3px solid transparent;
+    }
+    .live-chat:hover {
+      background: var(--white);
+      color: var(--maroon);
+      border:3px solid var(--maroon);
+      transform: scale(1.08);
+    }
+    @keyframes livechat-bounce {
+      0%,100% {transform:translateY(0);}
+      40% {transform:translateY(-3.5px);}
+      50% {transform:translateY(1.2px);}
+      60% {transform:translateY(-1.2px);}
+    }
+    html { scroll-behavior: smooth;}
+    /* Fixes for overlay hero section image */
+    .hero-img img {z-index: 3;}
+    .hero-img {position: relative;}
+    /* General layout fixes */
+    .py-section {padding-top: 4rem;padding-bottom: 4rem;}
+    .section-title {color: var(--maroon);}
+    /* Responsive grid fix */
+    @media (max-width: 1023px) {
+      .grid-cols-3, .lg\:grid-cols-3 { grid-template-columns: 1fr!important;}
+      .grid-cols-2, .md\:grid-cols-2 { grid-template-columns: 1fr!important;}
+    }
+    @media (max-width: 600px) {
+      .hero-text { font-size:1.03rem;}
+      .hero-bg { padding: 2.5rem 0.7rem;}
+      .section-title { font-size:1.5rem;}
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <header class="header-bg flex justify-between items-center py-4 px-6 md:px-12 shadow-md">
-        <a href="#home">
-            <img src="https://github.com/raghava239/skystaq-website/blob/main/SkyStaq_updated_01-removebg-preview.png?raw=true" alt="SkyStaq Technologies Logo" class="header-logo" />
-        </a>
-        <nav class="flex items-center space-x-6 md:space-x-8">
-            <a href="#Tranings" class="text-white hover:text-blue-200 font-medium transition duration-300">Tranings</a>
-            <a href="#about-us" class="text-white hover:text-blue-200 font-medium transition duration-300">About Us</a>
-            <a href="#contact" class="text-white hover:text-blue-200 font-medium transition duration-300">Contact Us</a>
-            <div class="hidden md:block">
-                <button class="btn-primary" onclick="window.open('https://docs.google.com/forms/d/1kN4mKxJHBumQ3bwzI3iheZ7wvSK1RbPpfZxuxXiVOSU/preview', '_blank')">Register Now</button>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero hero-bg flex flex-col md:flex-row justify-between items-stretch py-16 px-6 md:px-12 min-h-[60vh]" id="home">
-        <div class="hero-text max-w-2xl flex flex-col justify-center text-center md:text-left mb-10 md:mb-0">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
-                Unlock Your Potential with <span class="text-accent-blue">Cutting-Edge IT Training</span>
-            </h1>
-            <p class="text-lg text-gray-700 mb-8">
-                At SkyStaq Technologies, we're dedicated to transforming careers by providing <strong>industry-relevant IT training</strong> that bridges the gap between learning and real-world application. Whether you're a fresh graduate or an experienced professional, our <strong>expert-led, practical courses</strong> are designed to equip you with in-demand skills and propel you towards a successful future.
-            </p>
-            <a href="#Tranings" class="btn-primary inline-block">Explore Our Programs</a>
-        </div>
-
-        <div class="hero-img flex items-center justify-center">
-            <img
-                src="https://github.com/raghava239/skystaq-website/blob/main/home_page_image.jpg?raw=true"
-                alt="Professional woman working on laptop, representing IT training"
-                class="w-full md:w-[700px] max-h-[500px] h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-500"
-            />
-        </div>
-    </section>
-
-    <section class="brands bg-white py-12 px-6 md:px-12 shadow-inner">
-        <h2 class="text-center text-xl md:text-2xl font-semibold text-gray-600 mb-8">We provide trainings for all below platforms and products by Senior leading experts from industry</h2>
-        <div class="logo-carousel-container">
-            <div class="logo-carousel">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo" class="h-10 md:h-12 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="Git Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Docker Logo" class="h-10 md:h-12 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo" class="h-10 md:h-12 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://e7.pngegg.com/pngimages/102/597/png-clipart-computer-programming-git-software-development-programmer-version-control-github-logo-text-trademark.png" alt="Git Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Docker Logo" class="h-10 md:h-12 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo" class="h-8 md:h-10 opacity-80">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="h-8 md:h-10 opacity-80">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6 md:px-20 bg-gray-100" id="about-us">
-        <p class="text-accent-blue font-semibold text-sm mb-2 uppercase tracking-wide">
-            ABOUT SkyStaq Technologies
-        </p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 max-w-2xl">
-            Your Trusted Partner in IT Career Transformation
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-10 items-stretch">
-            <div class="flex flex-col justify-center h-full text-lg text-gray-700 space-y-4">
-                <p>
-                    SkyStaq Technologies isn't just a training institute; we are a <strong>premier IT upskilling provider</strong> committed to your career success. We deliver unparalleled education through <strong>expert-led, interactive sessions</strong>, ensuring you gain not just theoretical knowledge, but also <strong>practical, real-world expertise</strong>. Our curriculum is meticulously crafted around <strong>industry-relevant scenarios and project-based learning</strong>, making sure every graduate is truly <strong>job-ready</strong> from day one.
-                </p>
-                <p>
-                    With a steadfast commitment to <strong>integrity, hands-on learning, and unwavering student satisfaction</strong>, SkyStaq Technologies has rapidly emerged as a <strong>trusted name</strong> in the IT training landscape. Whether you're aiming to enter the tech field or an experienced professional looking to <strong>master the latest in-demand technologies</strong>, join us and experience a transformative learning journey that propels you forward in today’s dynamic tech environment.
-                </p>
-                <a href="#contact" class="btn-primary inline-block mt-4">Connect With Us</a>
-            </div>
-
-            <div class="flex items-center justify-center h-full">
-                <img
-                    src="image-shows-action.png"
-                    alt="Team collaborating, representing SkyStaq's approach"
-                    class="rounded-xl shadow-lg w-full h-full object-cover max-h-[500px] transition-transform duration-500 transform hover:scale-105"
-                />
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-6 md:px-20 bg-gray-50" id="Tranings">
-        <p class="text-accent-blue font-semibold text-sm mb-2 uppercase tracking-wide">OUR CORE PROGRAMS</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 max-w-2xl">Master the Technologies Driving Today's Digital World</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Amazon Web Services (AWS)</h3>
-                <ul>
-                    <li><strong>Core Concepts:</strong> AWS ecosystem, infrastructure, pricing</li>
-                    <li><strong>IAM:</strong> Users, groups, policies, roles</li>
-                    <li><strong>EC2:</strong> Instances, AMIs, EBS, snapshots, security groups</li>
-                    <li><strong>S3:</strong> Buckets, lifecycle rules, static websites</li>
-                    <li><strong>VPC:</strong> Subnets, routing, VPN, NAT</li>
-                    <li><strong>Lambda:</strong> Triggers, roles, integrations</li>
-                    <li><strong>DevOps:</strong> CodePipeline, CloudFormation, CloudWatch</li>
-                </ul>
-            </div>
-
-            <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Platform Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Google Cloud Platform (GCP)</h3>
-                <p>
-                    <strong>Compute Engine:</strong> VM creation, custom images, autoscaling, startup scripts<br>
-                    <strong>Google Kubernetes Engine (GKE):</strong> Cluster setup, pod management, deployment scaling<br>
-                    <strong>Cloud Storage:</strong> Buckets, IAM roles, signed URLs, object versioning<br>
-                    <strong>Networking Basics:</strong> VPCs, firewall rules, internal vs external IPs<br>
-                    <strong>DevOps Tools:</strong> Cloud Build, Deployment Manager, Container Registry
-                </p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Microsoft Azure</h3>
-                <p>
-                    <strong>Virtual Machines (VMs):</strong> VM provisioning, disks, extensions, availability sets<br>
-                    <strong>Azure Networking:</strong> VNets, NSGs, Load Balancers, Application Gateways<br>
-                    <strong>Azure DevOps:</strong> Repos, Pipelines, Boards, Artifacts<br>
-                    <strong>Storage Services:</strong> Blob, Queue, Table, and File Storage<br>
-                    <strong>Monitoring:</strong> Azure Monitor, Log Analytics, Application Insights
-                </p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="Git Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">DevOps & Microservices</h3>
-                <p>
-                    <strong>Version Control & CI/CD:</strong> Git (branching, pull requests, GitHub/GitLab), Jenkins (pipelines, plugins)<br>
-                    <strong>Containerization:</strong> Docker (containers, Dockerfiles, images)<br>
-                    <strong>Orchestration:</strong> Kubernetes (pods, deployments, services, ingress), Helm (chart management)
-                </p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Docker Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">Containerization & Orchestration</h3>
-                <p>
-                    <strong>Docker Basics:</strong> Images, containers, volumes, networks<br>
-                    <strong>Docker Compose:</strong> Multi-container applications<br>
-                    <strong>Kubernetes Fundamentals:</strong> Cluster architecture, pods, nodes<br>
-                    <strong>Istio & Service Mesh:</strong> Traffic management, observability
-                </p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" />
-                <h3 class="text-xl font-bold mb-2 text-gray-800">ServiceNow</h3>
-                <p>
-                    <strong>ITSM:</strong> Incident, Problem, Change, Request Management<br>
-                    <strong>ITBM:</strong> Project, Portfolio, Resource Management<br>
-                    <strong>ITOM:</strong> Discovery, Event, Operations Management<br>
-                    <strong>HRSD:</strong> HR Service Delivery<br>
-                    <strong>CSM:</strong> Customer Service Management
-                </p>
-            </div>
-        </div>
-    </section>
-
-<div style="
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background: #f0f8ff; /* light blue background */
-    padding: 1.5rem 2rem;
-    border-radius: 12px;
-    color: #003366; /* dark blue text */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    max-width: 900px;
-    margin: auto;
-">
-    <svg xmlns="http://www.w3.org/2000/svg" style="width: 48px; height: 48px; color: #1e90ff;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 4.354a4 4 0 110 5.292M12 4.354a4 4 0 000 5.292m0 0V15m0 0v2.354a4 4 0 110 5.292M12 15a4 4 0 100 0m0 0V2.354a4 4 0 110 5.292" />
-    </svg>
-    <div>
-        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; color: #0059b3;">
-            Learn from Certified Professionals
-        </h3>
-        <p style="line-height: 1.5; font-size: 1rem;">
-            Certified AWS, Azure, GCP Architects<br>
-            DevOps Engineers from leading firms<br>
-            ServiceNow & Salesforce Experts<br>
-            Experienced Java & Python Developers<br>
-            Every session combines theory, live demos, and interactive Q&A for complete clarity.
-        </p>
+  <header class="header-bg flex justify-between items-center py-4 px-6 md:px-12 shadow-md sticky top-0 z-50">
+    <div class="flex items-center">
+      <a href="#home" aria-label="SkyStaq Technologies Home">
+        <img src="https://github.com/raghava239/skystaq-website/blob/main/SkyStaq_updated_01-removebg-preview.png?raw=true" alt="SkyStaq Technologies Logo" class="header-logo" />
+      </a>
+      <span class="company-name">SkyStaq Technologies</span>
     </div>
-</div>
+    <nav class="hidden md:flex items-center space-x-7">
+      <a href="#Tranings">Trainings</a>
+      <a href="#about-us">About Us</a>
+      <a href="#contact">Contact Us</a>
+      <button class="btn-primary" onclick="window.open('https://wa.me/919100110858', '_blank')">Register Now</button>
+    </nav>
+    <button class="md:hidden text-white text-2xl mobile-menu-button" aria-label="Open mobile menu" id="mobileMenuButton" style="display:none;"><i class="fas fa-bars"></i></button>
+  </header>
 
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <button class="absolute top-6 right-6 text-white text-3xl" aria-label="Close mobile menu" id="closeMobileMenuButton">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#Tranings" onclick="closeMobileMenu()">Trainings</a>
+    <a href="#about-us" onclick="closeMobileMenu()">About Us</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact Us</a>
+    <button class="btn-primary" onclick="window.open('https://wa.me/919100110858', '_blank'); closeMobileMenu();">Register Now</button>
+  </div>
 
-    <footer class="footer-bg text-gray-200 py-12 px-6 md:px-12" id="contact">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-            <div class="flex flex-col items-center md:items-start">
-                <img src="https://github.com/raghava239/skystaq-website/blob/main/SkyStaq_updated_01-removebg-preview.png?raw=true" alt="SkyStaq Technologies Logo" class="footer-logo mb-4" />
-                <p class="text-sm text-gray-400">Empowering careers through cutting-edge IT training.</p>
-                <div class="social-icons mt-4 flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                </div>
-            </div>
+  <section class="hero hero-bg flex flex-col md:flex-row justify-between items-stretch py-16 px-6 md:px-12 min-h-[60vh]" id="home" style="position:relative;">
+    <div class="hero-text max-w-2xl flex flex-col justify-center text-center md:text-left mb-10 md:mb-0 mx-auto md:mx-0">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold section-title leading-tight mb-6">
+        Unlock Your Potential with <span class="text-accent">Cutting-Edge IT Training</span>
+      </h1>
+      <p class="text-lg mb-8">
+        At SkyStaq Technologies, we're dedicated to transforming careers by providing <strong class="text-accent">industry-relevant IT training</strong>. Whether you're a fresh graduate or an experienced professional, our <strong class="text-accent">expert-led, practical courses</strong> are designed to equip you with in-demand skills and propel you towards a successful future.
+      </p>
+      <a href="#Tranings" class="btn-primary inline-block self-center md:self-start">Explore Our Programs</a>
+    </div>
+    <div class="hero-img flex items-center justify-center relative" style="z-index:2;">
+      <img
+        src="https://github.com/raghava239/skystaq-website/blob/main/home_page_image.jpg?raw=true"
+        alt="Professional woman working on laptop, representing IT training"
+        class="w-full md:w-[700px] max-h-[500px] h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-500"
+      />
+    </div>
+  </section>
 
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="#home" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Home</a></li>
-                    <li><a href="#Tranings" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Trainings</a></li>
-                    <li><a href="#about-us" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">About Us</a></li>
-                    <li><a href="#contact" class="hover:text-blue-200 text-gray-300 transition-colors duration-300">Contact Us</a></li>
-                </ul>
-            </div>
+  <section class="brands bg-white py-12 px-6 md:px-12 shadow-inner">
+    <h2 class="text-center text-xl md:text-2xl font-semibold section-title mb-8">We provide trainings for all below platforms and products by Senior leading experts from industry</h2>
+    <div class="logo-carousel-container">
+      <div class="logo-carousel">
+        <!-- Logos (repeat as needed for continuous scroll) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo">
+        <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="DevSecOps Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo">
+        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+        <!-- Repeat... -->
+      </div>
+    </div>
+  </section>
 
-            <div>
-                <h3 class="text-xl font-bold mb-4 text-white">Get in Touch</h3>
-                <p class="text-sm mb-2 text-gray-400">📱 Mobile: +91-9100110858</p>
-                <p class="text-sm mb-4 text-gray-400">🌐 Website: <a href="http://www.skystaq.in" target="_blank" class="hover:underline text-gray-300">www.skystaq.in</a></p>
-                <button class="btn-primary" onclick="window.open('https://docs.google.com/forms/d/1kN4mKxJHBumQ3bwzI3iheZ7wvSK1RbPpfZxuxXiVOSU/preview', '_blank')">Submit Your Enquiry</button>
-            </div>
+  <section class="py-16 px-6 md:px-20 bg-gray-100" id="about-us">
+    <p class="font-semibold text-sm mb-2 uppercase tracking-wide text-center mx-auto max-w-2xl text-accent">about skystaq technologies</p>
+    <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 max-w-2xl text-center mx-auto">Your Trusted Partner in IT Career Transformation</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-stretch">
+      <div class="flex flex-col justify-center h-full text-lg space-y-4">
+        <p>
+          SkyStaq Technologies isn't just a training institute; we are a <strong class="text-accent">premier IT upskilling provider</strong> committed to your career success. We deliver unparalleled education through <strong class="text-accent">expert-led, interactive sessions</strong>, ensuring you gain not just theoretical knowledge, but also <strong class="text-accent">practical, real-world expertise</strong>. Our curriculum is meticulously crafted around <strong class="text-accent">industry-relevant scenarios and project-based learning</strong>, making sure every graduate is truly <strong class="text-accent">job-ready</strong> from day one.
+        </p>
+        <p>
+          With a steadfast commitment to <strong class="text-accent">integrity, hands-on learning, and unwavering student satisfaction</strong>, SkyStaq Technologies has rapidly emerged as a <strong class="text-accent">trusted name</strong> in the IT training landscape.
+        </p>
+        <a href="#contact" class="btn-primary inline-block mt-4 self-center md:self-start">Connect With Us</a>
+      </div>
+      <div class="flex items-center justify-center h-full">
+        <img src="image-shows-action.png" alt="Team collaborating, representing SkyStaq's approach" class="rounded-xl shadow-lg w-full h-full object-cover max-h-[500px] transition-transform duration-500 transform hover:scale-105" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 md:px-20 bg-gray-50" id="Tranings">
+    <p class="font-semibold text-sm mb-2 uppercase tracking-wide text-center mx-auto max-w-2xl text-accent">our core programs</p>
+    <h2 class="text-3xl md:text-4xl font-bold section-title mb-12 max-w-2xl text-center mx-auto">Master the Technologies Driving Today's Digital World</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Course cards (all buttons and accents use maroon/white) -->
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Amazon Web Services (AWS)</h3>
+        <ul>
+          <li><strong>Core Concepts:</strong> AWS ecosystem, infrastructure, pricing</li>
+          <li><strong>IAM:</strong> Users, groups, policies, roles</li>
+          <li><strong>EC2:</strong> Instances, AMIs, EBS, snapshots, security groups</li>
+          <li><strong>S3:</strong> Buckets, lifecycle rules, static websites</li>
+          <li><strong>VPC:</strong> Subnets, routing, VPN, NAT</li>
+          <li><strong>Lambda:</strong> Triggers, roles, integrations</li>
+          <li><strong>DevOps:</strong> CodePipeline, CloudFormation, CloudWatch</li>
+        </ul>
+        <a href="aws-curriculam.html" class="btn-primary">View AWS Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Platform Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Google Cloud Platform (GCP)</h3>
+        <ul>
+          <li><strong>Compute Engine:</strong> VM creation, custom images, autoscaling, startup scripts</li>
+          <li><strong>Google Kubernetes Engine (GKE):</strong> Cluster setup, pod management, deployment scaling</li>
+          <li><strong>Cloud Storage:</strong> Buckets, IAM roles, signed URLs, object versioning</li>
+          <li><strong>Networking Basics:</strong> VPCs, firewall rules, internal vs external IPs</li>
+          <li><strong>DevOps Tools:</strong> Cloud Build, Deployment Manager, Container Registry</li>
+        </ul>
+        <a href="gcp-curriculam.html" class="btn-primary">View GCP Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Microsoft Azure</h3>
+        <ul>
+          <li><strong>Virtual Machines (VMs):</strong> VM provisioning, disks, extensions, availability sets</li>
+          <li><strong>Azure Networking:</strong> VNets, NSGs, Load Balancers, Application Gateways</li>
+          <li><strong>Azure DevOps:</strong> Repos, Pipelines, Boards, Artifacts</li>
+          <li><strong>Storage Services:</strong> Blob, Queue, Table, and File Storage</li>
+          <li><strong>Monitoring:</strong> Azure Monitor, Log Analytics, Application Insights</li>
+        </ul>
+        <a href="azure-curriculam.html" class="btn-primary">View Azure Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="DevOps Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">DevOps & Microservices</h3>
+        <ul>
+          <li><strong>Version Control & CI/CD:</strong> Git (branching, pull requests, GitHub/GitLab), Jenkins (pipelines, plugins)</li>
+          <li><strong>Containerization:</strong> Docker (containers, Dockerfiles, images)</li>
+          <li><strong>Orchestration:</strong> Kubernetes (pods, deployments, services, ingress), Helm (chart management)</li>
+        </ul>
+        <a href="devops-curriculam.html" class="btn-primary">View DevOps Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Containerization & Orchestration</h3>
+        <ul>
+          <li><strong>Docker Basics:</strong> Images, containers, volumes, networks</li>
+          <li><strong>Docker Compose:</strong> Multi-container applications</li>
+          <li><strong>Kubernetes Fundamentals:</strong> Cluster architecture, pods, nodes</li>
+          <li><strong>Istio & Service Mesh:</strong> Traffic management, observability</li>
+        </ul>
+        <a href="containerization-curriculam.html" class="btn-primary">View Containerization Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">ServiceNow</h3>
+        <ul>
+          <li><strong>ITSM:</strong> Incident, Problem, Change, Request Management</li>
+          <li><strong>ITBM:</strong> Project, Portfolio, Resource Management</li>
+          <li><strong>ITOM:</strong> Discovery, Event, Operations Management</li>
+          <li><strong>HRSD:</strong> HR Service Delivery</li>
+          <li><strong>CSM:</strong> Customer Service Management</li>
+        </ul>
+        <a href="servicenow-curriculam.html" class="btn-primary">View ServiceNow Curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 md:px-20 bg-maroon-50 flex items-center justify-center" id="certified-professionals">
+    <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-xl shadow-lg max-w-4xl w-full text-accent border-2 border-maroon mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M12 4.354a4 4 0 000 5.292m0 0V15m0 0v2.354a4 4 0 110 5.292M12 15a4 4 0 100 0m0 0V2.354a4 4 0 110 5.292"/>
+      </svg>
+      <div>
+        <h3 class="text-2xl font-bold mb-2 text-accent">Learn from Certified Professionals</h3>
+        <ul class="list-none p-0 text-lg space-y-1">
+          <li>Certified AWS, Azure, GCP Architects</li>
+          <li>DevOps Engineers from leading firms</li>
+          <li>ServiceNow & Salesforce Experts</li>
+          <li>Experienced Java & Python Developers</li>
+          <li>Every session combines theory, live demos, and interactive Q&A for complete clarity.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-bg text-gray-200 py-12 px-6 md:px-12" id="contact">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div class="flex flex-col items-center md:items-start">
+        <img src="https://github.com/raghava239/skystaq-website/blob/main/SkyStaq_updated_01-removebg-preview.png?raw=true" alt="SkyStaq Technologies Logo" class="footer-logo mb-4" />
+        <p class="text-sm text-white">Empowering careers through cutting-edge IT training.</p>
+        <div class="social-icons mt-4 flex space-x-4">
+          <a href="#" class="transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
+          <a href="#" class="transition-colors duration-300" aria-label="Twitter"><i class="fab fa-twitter text-xl"></i></a>
+          <a href="#" class="transition-colors duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+          <a href="#" class="transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
         </div>
-        <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-8">
-            &copy; 2025 SkyStaq Technologies. All rights reserved.
-        </div>
-    </footer>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-white">Home</a></li>
+          <li><a href="#Tranings" class="text-white">Trainings</a></li>
+          <li><a href="#about-us" class="text-white">About Us</a></li>
+          <li><a href="#contact" class="text-white">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-white">Get in Touch</h3>
+        <p class="text-sm mb-2 text-white">📍 Location: Hyderabad</p>
+        <p class="text-sm mb-2 text-white">📱 Mobile: +91-9100110858</p>
+        <p class="text-sm mb-4 text-white">🌐 Website: <a href="http://www.skystaq.in" target="_blank" class="underline text-white">www.skystaq.in</a></p>
+        <button class="btn-outline-maroon" onclick="window.open('https://wa.me/919100110858', '_blank')">Submit Your Enquiry</button>
+      </div>
+    </div>
+    <div class="text-center text-white text-sm mt-10 border-t border-gray-400 pt-8">
+      &copy; 2025 SkyStaq Technologies. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Live Chat Button (maroon/white only) -->
+  <button class="live-chat" onclick="window.open('https://wa.me/919100110858', '_blank')"><i class="fab fa-whatsapp fa-lg"></i> <span class="hidden md:inline pl-1 font-medium">Live Chat</span></button>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const closeMobileMenuButton = document.getElementById('closeMobileMenuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => { mobileMenu.classList.add('open'); }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      setTimeout(() => { mobileMenu.classList.add('hidden'); }, 300);
+      document.body.style.overflow = '';
+    }
+    if (mobileMenuButton) {
+      mobileMenuButton.addEventListener('click', openMobileMenu);
+    }
+    if (closeMobileMenuButton) {
+      closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+    }
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (event) => { if (event.target === mobileMenu) { closeMobileMenu(); } });
+      window.addEventListener('resize', () => { if (window.innerWidth >= 768) { closeMobileMenu(); } });
+    }
+  </script>
+  <!-- Google Analytics (optional) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJMNGMEWQT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JJMNGMEWQT');
+  </script> -->
 </body>
 </html>
