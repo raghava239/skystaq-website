@@ -259,26 +259,146 @@
     <button class="btn-primary" onclick="window.open('https://wa.me/919100110858', '_blank'); closeMobileMenu();">Register Now</button>
   </div>
 
-  <section class="hero hero-bg flex flex-col md:flex-row justify-between items-stretch py-16 px-6 md:px-12 min-h-[60vh]" id="home" style="position:relative;">
-    <div class="hero-text max-w-2xl flex flex-col justify-center text-center md:text-left mb-10 md:mb-0 mx-auto md:mx-0">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold section-title leading-tight mb-6">
-        Unlock Your Potential with <span class="text-accent">Cutting-Edge IT Training</span>
-      </h1>
-      <p class="text-lg mb-8">
-        At SkyStaq Technologies, we're dedicated to transforming careers by providing <strong class="text-accent">industry-relevant IT training</strong>. Whether you're a fresh graduate or an experienced professional, our <strong class="text-accent">expert-led, practical courses</strong> are designed to equip you with in-demand skills and propel you towards a successful future.
-      </p>
-      <a href="#Tranings" class="btn-primary inline-block self-center md:self-start">Explore Our Programs</a>
-    </div>
-    <div class="hero-img flex items-center justify-center relative" style="z-index:2;">
-      <img
-        src="https://github.com/raghava239/skystaq-website/blob/main/home_page_image.jpg?raw=true"
-        alt="Professional woman working on laptop, representing IT training"
-        class="w-full md:w-[700px] max-h-[500px] h-full object-cover rounded-xl shadow-lg transform hover:scale-105 transition duration-500"
-      />
+  <!-- Hero Banner Section (already provided above) -->
+
+  <!-- Brand Carousel -->
+  <section class="brands bg-white py-12 px-6 md:px-12 shadow-inner">
+    <h2 class="text-center text-xl md:text-2xl font-semibold section-title mb-8">We provide trainings for all below platforms and products by Senior leading experts from industry</h2>
+    <div class="logo-carousel-container">
+      <div class="logo-carousel">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo">
+        <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="DevSecOps Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/300px-Salesforce.com_logo.svg.png" alt="Salesforce Logo">
+        <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" alt="Java Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+      </div>
     </div>
   </section>
 
-  <!-- Additional content (brand carousel, about, courses, professionals) goes here, using the same blue and white scheme. -->
+  <!-- About Section -->
+  <section class="py-16 px-6 md:px-20 bg-gray-100" id="about-us">
+    <p class="font-semibold text-sm mb-2 uppercase tracking-wide text-center mx-auto max-w-2xl text-accent">about skystaq technologies</p>
+    <h2 class="text-3xl md:text-4xl font-bold section-title mb-8 max-w-2xl text-center mx-auto">Your Trusted Partner in IT Career Transformation</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-stretch">
+      <div class="flex flex-col justify-center h-full text-lg space-y-4">
+        <p>
+          SkyStaq Technologies isn't just a training institute; we are a <strong class="text-accent">premier IT upskilling provider</strong> committed to your career success. We deliver unparalleled education through <strong class="text-accent">expert-led, interactive sessions</strong>, ensuring you gain not just theoretical knowledge, but also <strong class="text-accent">practical, real-world expertise</strong>. Our curriculum is meticulously crafted around <strong class="text-accent">industry-relevant scenarios and project-based learning</strong>, making sure every graduate is truly <strong class="text-accent">job-ready</strong> from day one.
+        </p>
+        <p>
+          With a steadfast commitment to <strong class="text-accent">integrity, hands-on learning, and unwavering student satisfaction</strong>, SkyStaq Technologies has rapidly emerged as a <strong class="text-accent">trusted name</strong> in the IT training landscape.
+        </p>
+        <a href="#contact" class="btn-primary inline-block mt-4 self-center md:self-start">Connect With Us</a>
+      </div>
+      <div class="flex items-center justify-center h-full">
+        <img src="image-shows-action.png" alt="Team collaborating, representing SkyStaq's approach" class="rounded-xl shadow-lg w-full h-full object-cover max-h-[500px] transition-transform duration-500 transform hover:scale-105" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="py-16 px-6 md:px-20 bg-gray-50" id="Tranings">
+    <p class="font-semibold text-sm mb-2 uppercase tracking-wide text-center mx-auto max-w-2xl text-accent">our core programs</p>
+    <h2 class="text-3xl md:text-4xl font-bold section-title mb-12 max-w-2xl text-center mx-auto">Master the Technologies Driving Today's Digital World</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Course cards (all use #00308F and white) -->
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="Amazon Web Services Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Amazon Web Services (AWS)</h3>
+        <ul>
+          <li><strong>Core Concepts:</strong> AWS ecosystem, infrastructure, pricing</li>
+          <li><strong>IAM:</strong> Users, groups, policies, roles</li>
+          <li><strong>EC2:</strong> Instances, AMIs, EBS, snapshots, security groups</li>
+          <li><strong>S3:</strong> Buckets, lifecycle rules, static websites</li>
+          <li><strong>VPC:</strong> Subnets, routing, VPN, NAT</li>
+          <li><strong>Lambda:</strong> Triggers, roles, integrations</li>
+          <li><strong>DevOps:</strong> CodePipeline, CloudFormation, CloudWatch</li>
+        </ul>
+        <a href="aws-curriculam.html" class="btn-primary">View AWS Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Google_cloud.png/640px-Google_cloud.png" alt="Google Cloud Platform Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Google Cloud Platform (GCP)</h3>
+        <ul>
+          <li><strong>Compute Engine:</strong> VM creation, custom images, autoscaling, startup scripts</li>
+          <li><strong>Google Kubernetes Engine (GKE):</strong> Cluster setup, pod management, deployment scaling</li>
+          <li><strong>Cloud Storage:</strong> Buckets, IAM roles, signed URLs, object versioning</li>
+          <li><strong>Networking Basics:</strong> VPCs, firewall rules, internal vs external IPs</li>
+          <li><strong>DevOps Tools:</strong> Cloud Build, Deployment Manager, Container Registry</li>
+        </ul>
+        <a href="gcp-curriculam.html" class="btn-primary">View GCP Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Microsoft Azure</h3>
+        <ul>
+          <li><strong>Virtual Machines (VMs):</strong> VM provisioning, disks, extensions, availability sets</li>
+          <li><strong>Azure Networking:</strong> VNets, NSGs, Load Balancers, Application Gateways</li>
+          <li><strong>Azure DevOps:</strong> Repos, Pipelines, Boards, Artifacts</li>
+          <li><strong>Storage Services:</strong> Blob, Queue, Table, and File Storage</li>
+          <li><strong>Monitoring:</strong> Azure Monitor, Log Analytics, Application Insights</li>
+        </ul>
+        <a href="azure-curriculam.html" class="btn-primary">View Azure Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://cdn.levelblue.com/blog-content/devsecops.jpg" alt="DevOps Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">DevOps & Microservices</h3>
+        <ul>
+          <li><strong>Version Control & CI/CD:</strong> Git (branching, pull requests, GitHub/GitLab), Jenkins (pipelines, plugins)</li>
+          <li><strong>Containerization:</strong> Docker (containers, Dockerfiles, images)</li>
+          <li><strong>Orchestration:</strong> Kubernetes (pods, deployments, services, ingress), Helm (chart management)</li>
+        </ul>
+        <a href="devops-curriculam.html" class="btn-primary">View DevOps Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Kubernetes_logo.svg" alt="Kubernetes Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">Containerization & Orchestration</h3>
+        <ul>
+          <li><strong>Docker Basics:</strong> Images, containers, volumes, networks</li>
+          <li><strong>Docker Compose:</strong> Multi-container applications</li>
+          <li><strong>Kubernetes Fundamentals:</strong> Cluster architecture, pods, nodes</li>
+          <li><strong>Istio & Service Mesh:</strong> Traffic management, observability</li>
+        </ul>
+        <a href="containerization-curriculam.html" class="btn-primary">View Containerization Curriculum</a>
+      </div>
+      <div class="course-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/ServiceNow_Logo_2018.png?20190302205549" alt="ServiceNow Logo" />
+        <h3 class="text-xl font-bold mb-2 text-accent">ServiceNow</h3>
+        <ul>
+          <li><strong>ITSM:</strong> Incident, Problem, Change, Request Management</li>
+          <li><strong>ITBM:</strong> Project, Portfolio, Resource Management</li>
+          <li><strong>ITOM:</strong> Discovery, Event, Operations Management</li>
+          <li><strong>HRSD:</strong> HR Service Delivery</li>
+          <li><strong>CSM:</strong> Customer Service Management</li>
+        </ul>
+        <a href="servicenow-curriculam.html" class="btn-primary">View ServiceNow Curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certified Professionals Section -->
+  <section class="py-16 px-6 md:px-20 bg-blue-50 flex items-center justify-center" id="certified-professionals">
+    <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-xl shadow-lg max-w-4xl w-full text-accent border-2 border-mainblue mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M12 4.354a4 4 0 000 5.292m0 0V15m0 0v2.354a4 4 0 110 5.292M12 15a4 4 0 100 0m0 0V2.354a4 4 0 110 5.292"/>
+      </svg>
+      <div>
+        <h3 class="text-2xl font-bold mb-2 text-accent">Learn from Certified Professionals</h3>
+        <ul class="list-none p-0 text-lg space-y-1">
+          <li>Certified AWS, Azure, GCP Architects</li>
+          <li>DevOps Engineers from leading firms</li>
+          <li>ServiceNow & Salesforce Experts</li>
+          <li>Experienced Java & Python Developers</li>
+          <li>Every session combines theory, live demos, and interactive Q&A for complete clarity.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer and Live Chat button as above -->
 
   <footer class="footer-bg text-gray-200 py-12 px-6 md:px-12" id="contact">
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
@@ -313,7 +433,6 @@
       &copy; 2025 SkyStaq Technologies. All rights reserved.
     </div>
   </footer>
-
   <button class="live-chat" onclick="window.open('https://wa.me/919100110858', '_blank')"><i class="fab fa-whatsapp fa-lg"></i> <span class="hidden md:inline pl-1 font-medium">Live Chat</span></button>
 
   <script>
